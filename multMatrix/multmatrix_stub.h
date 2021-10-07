@@ -10,7 +10,7 @@ typedef struct matrix_t
     int* data;
 }matrix_t;
 
-class multMatrix
+class multMatrix_stub
 {
 public:
     multMatrix_stub();
