@@ -1,6 +1,7 @@
 #ifndef MULTMATRIX_IMP_H
 #define MULTMATRIX_IMP_H
 
+#include "multmatrix.h"
 #include "utils.h"
 
 #define READ_MATRIX 'R'
@@ -9,6 +10,9 @@
 #define EXIT_ATRIX 'E'
 #define CREATE_I_MATRIX 'I'
 #define CREATE_R_MATRIX 'C'
+
+#define IP_SERVER "127.0.0.1"
+#define PORT_SERVER 3301
 
 typedef struct matrix_t
 {
@@ -19,6 +23,10 @@ typedef struct matrix_t
 
 class multMatrix
 {
+private:
+    multmatrix* multMatrix = nullptr;
+    bool salir = false;
+    int clientID=0;
 public:
     multMatrix_imp();
     matrix_t* readMatrix(const char* fileName);
