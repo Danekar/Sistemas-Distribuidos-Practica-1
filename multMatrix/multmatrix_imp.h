@@ -3,6 +3,13 @@
 
 #include "utils.h"
 
+#define READ_MATRIX 'R'
+#define MULT_MATRIX 'M'
+#define WRITE_MATRIX 'W'
+#define EXIT_ATRIX 'E'
+#define CREATE_I_MATRIX 'I'
+#define CREATE_R_MATRIX 'C'
+
 typedef struct matrix_t
 {
     int rows;
