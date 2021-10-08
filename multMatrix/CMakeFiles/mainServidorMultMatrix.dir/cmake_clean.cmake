@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mainServidorMultMatrix.dir/mainServidorMultMatrix.cpp.o"
+  "CMakeFiles/mainServidorMultMatrix.dir/mainServidorMultMatrix.cpp.o.d"
   "CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o"
+  "CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o.d"
   "CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o"
+  "CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o.d"
   "CMakeFiles/mainServidorMultMatrix.dir/utils.cpp.o"
+  "CMakeFiles/mainServidorMultMatrix.dir/utils.cpp.o.d"
   "mainServidorMultMatrix"
   "mainServidorMultMatrix.pdb"
 )

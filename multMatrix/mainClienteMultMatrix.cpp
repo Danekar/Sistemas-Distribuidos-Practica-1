@@ -7,13 +7,13 @@ int main (int argc, char** argv){
 
 	multMatrix_stub mulMatrix = new multMatrix_stub();
 
-    matrix_t* m1= mmatrix->createRandMatrix(5,5);
-    matrix_t* m2= mmatrix->createIdentity(5,5);
-    matrix_t* mres=mmatrix->multMatrices(m1,m2);
-    mmatrix->writeMatrix(mres,"resultado.txt");
-    matrix_t* m3=mmatrix->readMatrix("resultado.txt");
-    matrix_t* mres2=mmatrix->multMatrices(m1,m3);
-    mmatrix->writeMatrix(mres2,"resultado2.txt");
+    matrix_t* m1= mulMatrix.createRandMatrix(5,5);
+    matrix_t* m2= mulMatrix.createIdentity(5,5);
+    matrix_t* mres=mulMatrix.multMatrices(m1,m2);
+    mulMatrix.writeMatrix(mres,"resultado.txt");
+    matrix_t* m3=mulMatrix.readMatrix("resultado.txt");
+    matrix_t* mres2=mulMatrix.multMatrices(m1,m3);
+    mulMatrix.writeMatrix(mres2,"resultado2.txt");
 
 
 
@@ -22,6 +22,6 @@ int main (int argc, char** argv){
     freeMatrix(mres);
     freeMatrix(m3);
     freeMatrix(mres2);
-    delete mmatrix;
+    delete mulMatrix;
 	return 0;
 }
