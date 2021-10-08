@@ -5,7 +5,7 @@
 
 int main (int argc, char** argv){
 
-	multmatrix_stub* mulMatrix = new multmatrix_stub();
+	multMatrix_stub mulMatrix = new multMatrix_stub();
 
     matrix_t* m1= mmatrix->createRandMatrix(5,5);
     matrix_t* m2= mmatrix->createIdentity(5,5);

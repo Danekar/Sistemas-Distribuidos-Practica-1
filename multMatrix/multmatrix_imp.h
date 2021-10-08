@@ -1,32 +1,28 @@
 #ifndef MULTMATRIX_IMP_H
 #define MULTMATRIX_IMP_H
 
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include "multmatrix.h"
 #include "utils.h"
 
 #define READ_MATRIX 'R'
 #define MULT_MATRIX 'M'
 #define WRITE_MATRIX 'W'
-#define EXIT_ATRIX 'E'
+#define EXIT_MATRIX 'E'
 #define CREATE_I_MATRIX 'I'
 #define CREATE_R_MATRIX 'C'
+#define OP_OK 'O'
 
-typedef struct matrix_t
-{
-    int rows;
-    int cols;
-    int* data;
-}matrix_t;
-
-class multMatrix
-{
+class multMatrix_imp{
 private:
-    multmatrix* multMatrix = nullptr;
+    multMatrix* matrixImp = NULL;
     bool salir = false;
     int clientID=0;
 public:
-    multmatrix_imp(int clientID);
-    ~multmatrix_imp();
+    multMatrix_imp(int clientID);
+    ~multMatrix_imp();
     void exec();
 };
 

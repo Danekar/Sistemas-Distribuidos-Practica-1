@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/mainClienteMultMatrix.dir/mainClienteMultMatrix.cpp.o CMakeFiles/mainClienteMultMatrix.dir/multmatrix_stub.cpp.o CMakeFiles/mainClienteMultMatrix.dir/multmatrix.cpp.o CMakeFiles/mainClienteMultMatrix.dir/utils.cpp.o  -o mainClienteMultMatrix  -lpthread 
