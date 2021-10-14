@@ -37,6 +37,7 @@ while(!salir)
 				case READ_MATRIX:
 				{
 					char* nombreFich = nullptr;
+					//Creacion de matriz para guardar la leida
 					matrix_t* matrizLeer = new matrix_t;
 					//recibir nombre fichero
 					recvMSG(clientID,(void**)&nombreFich,&dataLen);
@@ -50,8 +51,48 @@ while(!salir)
 				}break;
 				case MULT_MATRIX:
 				{
-					
-					
+					char* buff = nullptr;
+					matrix_t* matrizResultado = new matrix_t;
+					//Creacon de matrices para guardar las matrices recibidas
+					matrix_t* m1 = NULL;
+					matrix_t* m2 = NULL;
+
+					//recibe rows m1
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&m1->rows,buff,sizeof(int));
+					delete buff;
+					//recibe cols m1
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&m1->cols,buff,sizeof(int));
+					delete buff;
+					//recibe data m1
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&m1->data,buff,sizeof(int));
+					delete buff;
+
+					//recibe rows m2
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&m2->rows,buff,sizeof(int));
+					delete buff;
+					//recibe cols m2
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&m2->cols,buff,sizeof(int));
+					delete buff;
+					//recibe data m2
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&m2->data,buff,sizeof(int));
+					delete buff;
+
+					//guarda la matriz resultado en una nueva matriz
+					matrizResultado = matrixImp->multMatrices(m1, m2);
+					//Borramos memoria que no utilicemos más
+					delete m1;
+					delete m2;
+					//envia al cliente la matriz por partes
+					sendMSG(clientID,(void*)&matrizResultado->rows,sizeof(int));
+					sendMSG(clientID,(void*)&matrizResultado->cols,sizeof(int));
+					sendMSG(clientID,(void*)matrizResultado->data,sizeof(int)*matrizResultado->rows*matrizResultado->cols);
+					delete matrizResultado;	
 				}break;
 				
 				case WRITE_MATRIX:

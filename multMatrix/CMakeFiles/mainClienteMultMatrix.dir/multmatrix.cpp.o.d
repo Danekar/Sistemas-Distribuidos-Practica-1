@@ -1,4 +1,4 @@
-CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o: \
+CMakeFiles/mainClienteMultMatrix.dir/multmatrix.cpp.o: \
  /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp \
  /usr/include/stdc-predef.h \
  /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h \

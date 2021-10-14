@@ -1,7 +1,7 @@
 CMakeFiles/multMatrix.dir/multmatrix.cpp.o: \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp \
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp \
  /usr/include/stdc-predef.h \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h \
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \

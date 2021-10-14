@@ -20,7 +20,7 @@ matrix_t* multMatrix_stub::readMatrix(const char* fileName){
 	char msg = READ_MATRIX;
 	char* buff = nullptr;
 	int dataLen = 0;
-	matriz_t matrizLeida=NULL;
+	matrix_t* matrizLeida=NULL;
 	//envio opcion
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 
@@ -28,23 +28,23 @@ matrix_t* multMatrix_stub::readMatrix(const char* fileName){
 	sendMSG(serverID, (void*)fileName, strlen(fileName)+1);
 	//recibir matriz
 	//recibe rows
-	revMSG(serverID,(void**)&buff, sizeof(int));
-	mempcy(matrizLeida->rows,buff,sizeof(int));
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizLeida->rows,buff,sizeof(int));
 	delete buff;
 	//recibe cols
-	revMSG(serverID,(void**)&buff, sizeof(int));
-	mempcy(matrizLeida->cols,buff,sizeof(int));
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizLeida->cols,buff,sizeof(int));
 	delete buff;
 	//recibe data
-	revMSG(serverID,(void*)&buff, sizeof(int)*matreizLeida->rows*matrizLeida->cols);
-	mempcy(matrizLeida->data,buff,sizeof(int)*matreizLeida->rows*matrizLeida->cols);
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizLeida->data,buff,sizeof(int));
 	delete buff;
 
 	return matrizLeida;
 
 }
-matrix_t multMatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
-
+matrix_t *multMatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
+	return NULL;
 }
 void multMatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
 
@@ -64,9 +64,9 @@ multMatrix_stub::~multMatrix_stub(){
 		std::cout<<"ERROR cerrando conexion\n";
 	}
 }
-matrix_t multMatrix_stub::createIdentity(int rows, int cols){
-
+matrix_t* multMatrix_stub::createIdentity(int rows, int cols){
+	return NULL;
 }
-matrix_t multMatrix_stub::createRandMatrix(int rows, int cols){
-	
+matrix_t* multMatrix_stub::createRandMatrix(int rows, int cols){
+	return NULL;
 }

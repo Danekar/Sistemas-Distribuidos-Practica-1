@@ -1,7 +1,7 @@
 CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o: \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.cpp \
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.cpp \
  /usr/include/stdc-predef.h \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.h \
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -138,8 +138,8 @@ CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc /usr/include/c++/9/stdlib.h \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/utils.h \
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h \
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/utils.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \

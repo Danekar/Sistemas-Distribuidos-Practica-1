@@ -1,5 +1,5 @@
 CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o: \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/main_multMatrix.cpp \
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/main_multMatrix.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -138,4 +138,4 @@ CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/fw1/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
+ /home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h

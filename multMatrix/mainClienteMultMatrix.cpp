@@ -17,11 +17,11 @@ int main (int argc, char** argv){
 
 
 
-    freeMatrix(m1);
-    freeMatrix(m2);
-    freeMatrix(mres);
-    freeMatrix(m3);
-    freeMatrix(mres2);
+    delete m1;
+    delete m2;
+    delete mres;
+    delete m3;
+    delete mres2;
     delete mulMatrix;
 	return 0;
 }

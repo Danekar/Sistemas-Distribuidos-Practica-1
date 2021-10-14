@@ -10,17 +10,14 @@
 #define EXIT_MATRIX 'E'
 #define CREATE_I_MATRIX 'I'
 #define CREATE_R_MATRIX 'C'
+#define OP_OK 'O'
 
 #define IP_SERVER "127.0.0.1"
 #define PORT_SERVER 3301
 
-typedef struct matrix_t_stub{
-    int rows;
-    int cols;
-    int* data;
-}matrix_t_stub;
-
 class multMatrix_stub{
+private:
+    int serverID;
 public:
     multMatrix_stub();
     matrix_t* readMatrix(const char* fileName);
