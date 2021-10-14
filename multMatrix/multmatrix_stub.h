@@ -4,13 +4,15 @@
 #include "multmatrix.h"
 #include "utils.h"
 
-#define READ_MATRIX 'R'
-#define MULT_MATRIX 'M'
-#define WRITE_MATRIX 'W'
-#define EXIT_MATRIX 'E'
+#define READ_MATRIX     'R'
+#define MULT_MATRIX     'M'
+#define WRITE_MATRIX    'W'
+#define EXIT_MATRIX     'E'
 #define CREATE_I_MATRIX 'I'
 #define CREATE_R_MATRIX 'C'
-#define OP_OK 'O'
+
+#define OP_EXIT         'E'
+#define OP_OK           'O'
 
 #define IP_SERVER "127.0.0.1"
 #define PORT_SERVER 3301
