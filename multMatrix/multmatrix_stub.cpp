@@ -1,6 +1,6 @@
 #include "multmatrix_stub.h"
 
-multMatrix_stub::multmultMatrix_stub(){
+multMatrix_stub::multMatrix_stub(){
 	char* ip=NULL;
 	ip=new char[strlen(IP_SERVER)+1];
 	memcpy(ip,IP_SERVER,strlen(IP_SERVER)+1);
