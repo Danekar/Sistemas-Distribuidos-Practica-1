@@ -2,7 +2,7 @@
 
 multMatrix_imp::multMatrix_imp(int clientID){
 
-	matrixImp = new multMatrix();
+	multMatrix* matrixImp = new multMatrix();
 	//inicializar estados, extra...
 	salir=false;
 	this->clientID=clientID;
@@ -97,15 +97,72 @@ while(!salir)
 				
 				case WRITE_MATRIX:
 				{
-					
+					matrix_t* matrizEscribir = new matrix_t;
+					char* fileName = nullptr;
+					char* buff = nullptr;
+					//recibir nombre del fichero
+					recvMSG(clientID,(void**)&fileName, &dataLen);
+
+					//recibe rows matriz escribir
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&matrizEscribir->rows,buff,sizeof(int));
+					delete buff;
+					//recibe cols matrizEscribir
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&matrizEscribir->cols,buff,sizeof(int));
+					delete buff;
+					//recibe data matrizEscribir
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&matrizEscribir->data,buff,sizeof(int));
+					delete buff;
+
+					matrixImp->writeMatrix(matrizEscribir, fileName);
+					delete matrizEscribir;
+					delete fileName;
 				}break;
 				case CREATE_I_MATRIX:
 				{
-					
+					int rows = 0;
+					int cols = 0;
+					char* buff = nullptr;
+					matrix_t* matrizIdentidad = new matrix_t;
+
+					//recibe los parametros
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&rows,buff,sizeof(int));
+					delete buff;
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&cols,buff,sizeof(int));
+					delete buff;
+
+					matrizIdentidad = matrixImp->createIdentity(rows,cols);
+					//devolver al cliente la matriz
+					sendMSG(clientID,(void*)&matrizIdentidad->rows,sizeof(int));
+					sendMSG(clientID,(void*)&matrizIdentidad->cols,sizeof(int));
+					sendMSG(clientID,(void*)matrizIdentidad->data,sizeof(int)*matrizIdentidad->rows*matrizIdentidad->cols);
+					delete matrizIdentidad;	
 				}break;
 				case CREATE_R_MATRIX:
 				{
-					
+					int rows = 0;
+					int cols = 0;
+					char* buff = nullptr;
+					matrix_t* matrizRandom = new matrix_t;
+
+					//recibe los parametros
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&rows,buff,sizeof(int));
+					delete buff;
+					recvMSG(clientID,(void**)&buff, &dataLen);
+					memcpy(&cols,buff,sizeof(int));
+					delete buff;
+
+					matrizRandom = matrixImp->createRandMatrix(rows, cols);
+					//devolver al cliente la matriz
+					sendMSG(clientID,(void*)&matrizRandom->rows,sizeof(int));
+					sendMSG(clientID,(void*)&matrizRandom->cols,sizeof(int));
+					sendMSG(clientID,(void*)matrizRandom->data,sizeof(int)*matrizRandom->rows*matrizRandom->cols);
+					delete matrizRandom;
 				}break;
 				case EXIT_MATRIX:
 				{

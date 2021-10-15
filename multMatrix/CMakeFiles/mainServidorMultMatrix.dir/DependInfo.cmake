@@ -1,17 +1,18 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/mainServidorMultMatrix.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/mainServidorMultMatrix.cpp.o"
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o"
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o"
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/utils.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/utils.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/mainServidorMultMatrix.cpp" "CMakeFiles/mainServidorMultMatrix.dir/mainServidorMultMatrix.cpp.o" "gcc" "CMakeFiles/mainServidorMultMatrix.dir/mainServidorMultMatrix.cpp.o.d"
-  "/home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp" "CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o" "gcc" "CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o.d"
-  "/home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.cpp" "CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o" "gcc" "CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o.d"
-  "/home/fw1/Desktop/Sistemas-Distribuidos-Practica-1/multMatrix/utils.cpp" "CMakeFiles/mainServidorMultMatrix.dir/utils.cpp.o" "gcc" "CMakeFiles/mainServidorMultMatrix.dir/utils.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # Targets to which this target links.
