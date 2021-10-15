@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/mainCliente.dir/mainCliente.cpp.o CMakeFiles/mainCliente.dir/filemanager_stub.cpp.o CMakeFiles/mainCliente.dir/filemanager.cpp.o CMakeFiles/mainCliente.dir/utils.cpp.o  -o mainCliente  -lpthread 

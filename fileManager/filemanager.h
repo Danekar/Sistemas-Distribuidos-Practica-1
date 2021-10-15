@@ -7,6 +7,7 @@
 #include <map>
 #include <vector>
 #include <dirent.h>
+#include "utils.h"
 
 using namespace std;
 
