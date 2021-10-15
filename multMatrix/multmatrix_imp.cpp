@@ -57,69 +57,61 @@ while(!salir)
 					matrix_t* m1 = new matrix_t;
 					matrix_t* m2 = new matrix_t;
 
-					std::cout<<"Servidor recibo row de m1 \n";
 					//recibe rows m1
+    				std::cout<<"3.1\n";
 					recvMSG(clientID,(void**)&buff, &dataLen);
 					memcpy(&m1->rows,buff,sizeof(int));
 					delete buff;
 					
-					std::cout<<"Servidor recibo col de m1 \n";
 					//recibe cols m1
+    				std::cout<<"3.2\n";
 					recvMSG(clientID,(void**)&buff, &dataLen);
 					memcpy(&m1->cols,buff,sizeof(int));
 					delete buff;
 					
-					std::cout<<"Servidor recibo data de m1 \n";
 					//recibe data m1
+   				 	std::cout<<"3.3\n";
 					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&m1->data,buff,sizeof(int));
+					//memcpy(&m1->data,buff,sizeof(int)*m1->rows*m1->cols);
+					m1->data = (int*)buff;
 					delete buff;
 
 
-					std::cout<<"Servidor recibo row de m2 \n";
 					//recibe rows m2
+    				std::cout<<"3.4\n";
 					recvMSG(clientID,(void**)&buff, &dataLen);
 					memcpy(&m2->rows,buff,sizeof(int));
 					delete buff;
 					
-					std::cout<<"Servidor recibo col de m2 \n";
 					//recibe cols m2
+    				std::cout<<"3.5\n";
 					recvMSG(clientID,(void**)&buff, &dataLen);
 					memcpy(&m2->cols,buff,sizeof(int));
 					delete buff;
 					
-					std::cout<<"Servidor recibo data de m2 \n";
 					//recibe data m2
+    				std::cout<<"3.6\n";
 					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&m2->data,buff,sizeof(int));
+					//memcpy(&m2->data,buff,sizeof(int)*m2->rows*m2->cols);
+					m2->data = (int*)buff;
 					delete buff;
 
-					
-					std::cout<<"Estoy enseñando cosas \n";
-					std::cout<<"Fila de m1: "<<m1->rows<<" con columnas: "<<m1->cols<<" Con le primer dato: "<<m1->data[0]<<std::endl;
-					for(int i = 0;i<m1->rows*m1->cols;i++){
-						std::cout<<m1->data[i]<<" ";	
-					}
-					std::cout<<"\n";
-					std::cout<<"Servidor multiplicando...\n";
 					//guarda la matriz resultado en una nueva matriz
-					matrizResultado = matrixImp->multMatrices(m1, m2);
-					//Borramos memoria que no utilicemos más
-					std::cout<<"Servidor Eliminando\n";
+    				std::cout<<"3.7\n";
+					matrizResultado = matrixImp->multMatrices(m1, m2);					
 					delete m1;
 					delete m2;
-					
-					
+
 					//envia al cliente la matriz por partes
-					std::cout<<"Servidor enviando row\n";
+    				std::cout<<"3.8\n";
 					sendMSG(clientID,(void*)&matrizResultado->rows,sizeof(int));
-					
-					std::cout<<"Servidor enviando col\n";
+					std::cout<<"3.8.2\n";					
 					sendMSG(clientID,(void*)&matrizResultado->cols,sizeof(int));
-					
-					std::cout<<"Servidor enviando data\n";
+					std::cout<<"3.8.3\n";
 					sendMSG(clientID,(void*)matrizResultado->data,sizeof(int)*matrizResultado->rows*matrizResultado->cols);
-					delete matrizResultado;	
+					std::cout<<"3.8.4\n";
+					delete matrizResultado;
+					
 				}break;
 				
 				case WRITE_MATRIX:
@@ -140,7 +132,8 @@ while(!salir)
 					delete buff;
 					//recibe data matrizEscribir
 					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&matrizEscribir->data,buff,sizeof(int));
+					//memcpy(&matrizEscribir->data,buff,sizeof(int));
+					matrizEscribir->data = (int*)buff;
 					delete buff;
 
 					matrixImp->writeMatrix(matrizEscribir, fileName);
@@ -155,51 +148,45 @@ while(!salir)
 					matrix_t* matrizIdentidad = new matrix_t;
 
 					//recibe los parametros
-					
 					recvMSG(clientID,(void**)&buff, &dataLen);
 					memcpy(&rows,buff,sizeof(int));
 					delete buff;
-					
 					
 					recvMSG(clientID,(void**)&buff, &dataLen);
 					memcpy(&cols,buff,sizeof(int));
 					delete buff;
 
 					
-
 					matrizIdentidad = matrixImp->createIdentity(rows,cols);
 					//devolver al cliente la matriz
-					
 					
 					sendMSG(clientID,(void*)&matrizIdentidad->rows,sizeof(int));
 					sendMSG(clientID,(void*)&matrizIdentidad->cols,sizeof(int));
 					sendMSG(clientID,(void*)matrizIdentidad->data,sizeof(int)*matrizIdentidad->rows*matrizIdentidad->cols);
-					delete matrizIdentidad;
-					
-				
+					delete matrizIdentidad;	
 				}break;
 				case CREATE_R_MATRIX:
 				{
+					
 					int rows = 0;
 					int cols = 0;
-					char* buff = nullptr;
+					char* buff = nullptr;					
 					matrix_t* matrizRandom = new matrix_t;
 
-					//recibe los parametros
-					recvMSG(clientID,(void**)&buff, &dataLen);
+					//recibe los parametros					
+					recvMSG(clientID,(void**)&buff, &dataLen);					
 					memcpy(&rows,buff,sizeof(int));
 					delete buff;
-					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&cols,buff,sizeof(int));
+					
+					recvMSG(clientID,(void**)&buff, &dataLen);					
+					memcpy(&cols,buff,sizeof(int));				
 					delete buff;
 
 					matrizRandom = matrixImp->createRandMatrix(rows, cols);
-					//devolver al cliente la matriz
 					
+					//devolver al cliente la matriz					
 					sendMSG(clientID,(void*)&matrizRandom->rows,sizeof(int));
-					
 					sendMSG(clientID,(void*)&matrizRandom->cols,sizeof(int));
-					
 					sendMSG(clientID,(void*)matrizRandom->data,sizeof(int)*matrizRandom->rows*matrizRandom->cols);
 					delete matrizRandom;
 				}break;
@@ -207,6 +194,7 @@ while(!salir)
 				{
 					salir=true;
 					char opOK=OP_OK;
+					std::cout<<"Salida\n";
 					sendMSG(clientID,(void*)&opOK,sizeof(char));
 				}break;
 				

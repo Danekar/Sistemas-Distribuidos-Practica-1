@@ -50,37 +50,39 @@ matrix_t *multMatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 	matrix_t* matrizResultado = NULL;
 	
 	//Enviamos la opcion
+	std::cout<<"3.1\n";
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 
-	std::cout<<"Cliente envio de m1 \n";
+	std::cout<<"3.2\n";
 	//Enviamos las columnas, filas y datos de la matriz m1 respectivamente.
 	sendMSG(serverID,(void*)&m1->rows,sizeof(int));
 	sendMSG(serverID,(void*)&m1->cols,sizeof(int));
 	sendMSG(serverID,(void*)&m1->data,sizeof(int)*m1->rows*m1->cols);
 	
-	std::cout<<"Cliente envio de m2 rows\n";
+	std::cout<<"3.3\n";
 	//Enviamos las columnas, filas y datos de la matriz m2 respectivamente.
 	sendMSG(serverID,(void*)&m2->rows,sizeof(int));
-	std::cout<<"Cliente envio de m2 cols \n";
 	sendMSG(serverID,(void*)&m2->cols,sizeof(int));
-	std::cout<<"Cliente envio de m2 data\n";
 	sendMSG(serverID,(void*)&m2->data,sizeof(int)*m2->rows*m2->cols);
 	
-	std::cout<<"Cliente reciblo de row \n";
+	std::cout<<"3.6\n";
 	recvMSG(serverID,(void**)&buff, &dataLen);
+	std::cout<<"3.6.2\n";
 	memcpy(&matrizResultado->rows,buff,sizeof(int));
+	std::cout<<"3.6.3\n";
 	delete buff;
 	
-	std::cout<<"Cliente reciblo de cols \n";
+	std::cout<<"3.7\n";
 	//recibe cols
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	memcpy(&matrizResultado->cols,buff,sizeof(int));
 	delete buff;
 	
-	std::cout<<"Cliente reciblo de data \n";
+	std::cout<<"3.8\n";
 	//recibe data
 	recvMSG(serverID,(void**)&buff, &dataLen);
-	memcpy(&matrizResultado->data,buff,sizeof(int));
+	//memcpy(&matrizResultado->data,buff,sizeof(int));
+	matrizResultado->data = (int*)buff;
 	delete buff;
 	
 	
@@ -131,23 +133,20 @@ matrix_t* multMatrix_stub::createIdentity(int rows, int cols){
 	sendMSG(serverID,(void**)&rows,sizeof(int));
 	sendMSG(serverID,(void**)&cols,sizeof(int));
 	
-	
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	memcpy(&matrizIdentidad->rows,buff,sizeof(int));
 	delete buff;
 	
-	
 	//recibe cols m1
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	memcpy(&matrizIdentidad->cols,buff,sizeof(int));
-	delete buff;
-	
+	delete buff;	
 	
 	//recibe data m1
 	recvMSG(serverID,(void**)&buff, &dataLen);
-	memcpy(&matrizIdentidad->data,buff,sizeof(int));
+	//memcpy(&matrizIdentidad->data,buff,sizeof(int));
+	matrizIdentidad->data = (int*)buff;
 	delete buff;
-	
 	
 	return matrizIdentidad;
 }
@@ -158,29 +157,24 @@ matrix_t* multMatrix_stub::createRandMatrix(int rows, int cols){
 	matrix_t* matrizRandom = new matrix_t;
 	
 	//Enviamos la opcion
-	
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 		
-	
 	//Enviamso las filas y columnas respectivamente
 	sendMSG(serverID,(void**)&rows,sizeof(int));
 	sendMSG(serverID,(void**)&cols,sizeof(int));
 	
-	
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	memcpy(&matrizRandom->rows,buff,sizeof(int));
 	delete buff;
-	//recibe cols m1
-	
 
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	memcpy(&matrizRandom->cols,buff,sizeof(int));
 	delete buff;
-	
 
 	//recibe data m1
 	recvMSG(serverID,(void**)&buff, &dataLen);
-	memcpy(&matrizRandom->data,buff,sizeof(int)*matrizRandom->cols*matrizRandom->rows);
+	//memcpy(&matrizRandom->data,buff,sizeof(int)*matrizRandom->cols*matrizRandom->rows);
+	matrizRandom->data = (int*)buff;
 	delete buff;
 	
 	
