@@ -51,7 +51,8 @@ while(!salir)
 				}break;
 				case MULT_MATRIX:
 				{
-					char* buff = nullptr;
+					char* m1buff = nullptr;
+					char* m2buff = nullptr;
 					matrix_t* matrizResultado = new matrix_t;
 					//Creacon de matrices para guardar las matrices recibidas
 					matrix_t* m1 = new matrix_t;
@@ -59,42 +60,39 @@ while(!salir)
 
 					//recibe rows m1
     				std::cout<<"3.1\n";
-					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&m1->rows,buff,sizeof(int));
-					delete buff;
+					recvMSG(clientID,(void**)&m1buff, &dataLen);
+					memcpy(&m1->rows,m1buff,sizeof(int));
+					delete m1buff;
 					
 					//recibe cols m1
     				std::cout<<"3.2\n";
-					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&m1->cols,buff,sizeof(int));
-					delete buff;
+					recvMSG(clientID,(void**)&m1buff, &dataLen);
+					memcpy(&m1->cols,m1buff,sizeof(int));
+					delete m1buff;
 					
 					//recibe data m1
    				 	std::cout<<"3.3\n";
-					recvMSG(clientID,(void**)&buff, &dataLen);
+					recvMSG(clientID,(void**)&m1buff, &dataLen);
 					//memcpy(&m1->data,buff,sizeof(int)*m1->rows*m1->cols);
-					m1->data = (int*)buff;
-					delete buff;
-
+					m1->data = (int*)m1buff;
 
 					//recibe rows m2
     				std::cout<<"3.4\n";
-					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&m2->rows,buff,sizeof(int));
-					delete buff;
+					recvMSG(clientID,(void**)&m2buff, &dataLen);
+					memcpy(&m2->rows,m2buff,sizeof(int));
+					delete m2buff;
 					
 					//recibe cols m2
     				std::cout<<"3.5\n";
-					recvMSG(clientID,(void**)&buff, &dataLen);
-					memcpy(&m2->cols,buff,sizeof(int));
-					delete buff;
+					recvMSG(clientID,(void**)&m2buff, &dataLen);
+					memcpy(&m2->cols,m2buff,sizeof(int));
+					delete m2buff;
 					
 					//recibe data m2
     				std::cout<<"3.6\n";
-					recvMSG(clientID,(void**)&buff, &dataLen);
+					recvMSG(clientID,(void**)&m2buff, &dataLen);
 					//memcpy(&m2->data,buff,sizeof(int)*m2->rows*m2->cols);
-					m2->data = (int*)buff;
-					delete buff;
+					m2->data = (int*)m2buff;
 
 					//guarda la matriz resultado en una nueva matriz
     				std::cout<<"3.7\n";

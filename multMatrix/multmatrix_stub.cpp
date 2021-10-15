@@ -146,7 +146,6 @@ matrix_t* multMatrix_stub::createIdentity(int rows, int cols){
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	//memcpy(&matrizIdentidad->data,buff,sizeof(int));
 	matrizIdentidad->data = (int*)buff;
-	delete buff;
 	
 	return matrizIdentidad;
 }
@@ -174,9 +173,7 @@ matrix_t* multMatrix_stub::createRandMatrix(int rows, int cols){
 	//recibe data m1
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	//memcpy(&matrizRandom->data,buff,sizeof(int)*matrizRandom->cols*matrizRandom->rows);
-	matrizRandom->data = (int*)buff;
-	delete buff;
-	
+	matrizRandom->data = (int*)buff;	
 	
 	return matrizRandom;
 }
