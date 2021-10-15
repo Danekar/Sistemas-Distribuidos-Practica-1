@@ -20,7 +20,7 @@ matrix_t* multMatrix_stub::readMatrix(const char* fileName){
 	char msg = READ_MATRIX;
 	char* buff = nullptr;
 	int dataLen = 0;
-	matrix_t* matrizLeida=NULL;
+	matrix_t* matrizLeida=new matrix_t;
 	//envio opcion
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 
@@ -37,16 +37,70 @@ matrix_t* multMatrix_stub::readMatrix(const char* fileName){
 	delete buff;
 	//recibe data
 	recvMSG(serverID,(void**)&buff, &dataLen);
-	memcpy(&matrizLeida->data,buff,sizeof(int));
+	memcpy(&matrizLeida->data,buff,sizeof(int)*matrizLeida->cols*matrizLeida->rows);
 	delete buff;
 
 	return matrizLeida;
 
 }
 matrix_t *multMatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
-	return NULL;
+	char msg = MULT_MATRIX;
+	char* buff = nullptr;
+	int dataLen = 0;
+	matrix_t* matrizResultado = NULL;
+	
+	//Enviamos la opcion
+	sendMSG(serverID,(void*)&msg,sizeof(char));
+
+	std::cout<<"Cliente envio de m1 \n";
+	//Enviamos las columnas, filas y datos de la matriz m1 respectivamente.
+	sendMSG(serverID,(void*)&m1->rows,sizeof(int));
+	sendMSG(serverID,(void*)&m1->cols,sizeof(int));
+	sendMSG(serverID,(void*)&m1->data,sizeof(int)*m1->rows*m1->cols);
+	
+	std::cout<<"Cliente envio de m2 rows\n";
+	//Enviamos las columnas, filas y datos de la matriz m2 respectivamente.
+	sendMSG(serverID,(void*)&m2->rows,sizeof(int));
+	std::cout<<"Cliente envio de m2 cols \n";
+	sendMSG(serverID,(void*)&m2->cols,sizeof(int));
+	std::cout<<"Cliente envio de m2 data\n";
+	sendMSG(serverID,(void*)&m2->data,sizeof(int)*m2->rows*m2->cols);
+	
+	std::cout<<"Cliente reciblo de row \n";
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizResultado->rows,buff,sizeof(int));
+	delete buff;
+	
+	std::cout<<"Cliente reciblo de cols \n";
+	//recibe cols
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizResultado->cols,buff,sizeof(int));
+	delete buff;
+	
+	std::cout<<"Cliente reciblo de data \n";
+	//recibe data
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizResultado->data,buff,sizeof(int));
+	delete buff;
+	
+	
+	return matrizResultado;
 }
 void multMatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
+	char msg = WRITE_MATRIX;
+	char* buff = nullptr;
+	int dataLen = 0;
+	
+	//Enviamos la opcion
+	sendMSG(serverID,(void*)&msg,sizeof(char));
+	//Enviar nombre del archivo
+	sendMSG(serverID, (void*)fileName, strlen(fileName)+1);
+	
+	//Enviamso las filas, columans y datos de la matriz
+	sendMSG(serverID,(void*)&m->rows,sizeof(int));
+	sendMSG(serverID,(void*)&m->cols,sizeof(int));
+	sendMSG(serverID,(void*)m->data,sizeof(int)*m->rows*m->cols);
+	
 
 }
 multMatrix_stub::~multMatrix_stub(){
@@ -65,8 +119,70 @@ multMatrix_stub::~multMatrix_stub(){
 	}
 }
 matrix_t* multMatrix_stub::createIdentity(int rows, int cols){
-	return NULL;
+	char msg = CREATE_I_MATRIX;
+	char* buff = nullptr;
+	int dataLen = 0;
+	matrix_t* matrizIdentidad = new matrix_t;
+	
+	//Enviamos la opcion
+	sendMSG(serverID,(void*)&msg,sizeof(char));
+		
+	//Enviamso las filas y columnas respectivamente
+	sendMSG(serverID,(void**)&rows,sizeof(int));
+	sendMSG(serverID,(void**)&cols,sizeof(int));
+	
+	
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizIdentidad->rows,buff,sizeof(int));
+	delete buff;
+	
+	
+	//recibe cols m1
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizIdentidad->cols,buff,sizeof(int));
+	delete buff;
+	
+	
+	//recibe data m1
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizIdentidad->data,buff,sizeof(int));
+	delete buff;
+	
+	
+	return matrizIdentidad;
 }
 matrix_t* multMatrix_stub::createRandMatrix(int rows, int cols){
-	return NULL;
+	char msg = CREATE_R_MATRIX;
+	char* buff = nullptr;
+	int dataLen = 0;
+	matrix_t* matrizRandom = new matrix_t;
+	
+	//Enviamos la opcion
+	
+	sendMSG(serverID,(void*)&msg,sizeof(char));
+		
+	
+	//Enviamso las filas y columnas respectivamente
+	sendMSG(serverID,(void**)&rows,sizeof(int));
+	sendMSG(serverID,(void**)&cols,sizeof(int));
+	
+	
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizRandom->rows,buff,sizeof(int));
+	delete buff;
+	//recibe cols m1
+	
+
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizRandom->cols,buff,sizeof(int));
+	delete buff;
+	
+
+	//recibe data m1
+	recvMSG(serverID,(void**)&buff, &dataLen);
+	memcpy(&matrizRandom->data,buff,sizeof(int)*matrizRandom->cols*matrizRandom->rows);
+	delete buff;
+	
+	
+	return matrizRandom;
 }

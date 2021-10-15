@@ -17,7 +17,7 @@
 
 class multMatrix_imp{
 private:
-    multMatrix* matrixImp = nullptr;
+    multMatrix* matrixImp = NULL;
     bool salir = false;
     int clientID=0;
 public:
