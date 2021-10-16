@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/multmatrix.cpp
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp
 multmatrix.h
-/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/multmatrix.h
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
 multmatrix.h
-/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/multmatrix.h
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
 stdio.h
 -
 stdlib.h
@@ -26,5 +26,5 @@ sys/types.h
 unistd.h
 -
 
-/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/multmatrix.h
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
 

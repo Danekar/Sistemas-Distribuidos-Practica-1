@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/mainServidorMultMatrix.cpp" "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/mainServidorMultMatrix.cpp.o"
-  "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/multmatrix.cpp" "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o"
-  "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/multmatrix_imp.cpp" "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o"
-  "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/utils.cpp" "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/utils.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/mainServidorMultMatrix.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/mainServidorMultMatrix.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/multmatrix.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/multmatrix_imp.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/utils.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/mainServidorMultMatrix.dir/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

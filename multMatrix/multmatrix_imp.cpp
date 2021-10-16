@@ -37,15 +37,28 @@ while(!salir)
 				case READ_MATRIX:
 				{
 					char* nombreFich = nullptr;
+					char* buff = nullptr;
+					
 					//Creacion de matriz para guardar la leida
 					matrix_t* matrizLeer = new matrix_t;
 					//recibir nombre fichero
-					recvMSG(clientID,(void**)&nombreFich,&dataLen);
-					matrizLeer = matrixImp->readMatrix(nombreFich);
+					
+					recvMSG(clientID,(void**)&buff,&dataLen);
+					
+					
+					//memcpy(&nombreFich,buff,strlen(buff)+1);	
+					
+					
+					matrizLeer = matrixImp->readMatrix(buff);
+					delete buff;
 					//enviar matriz
+					
 					sendMSG(clientID,(void*)&matrizLeer->rows,sizeof(int));
+					
 					sendMSG(clientID,(void*)&matrizLeer->cols,sizeof(int));
+					
 					sendMSG(clientID,(void*)matrizLeer->data,sizeof(int)*matrizLeer->rows*matrizLeer->cols);
+					
 					delete matrizLeer;	
 					
 				}break;
@@ -59,55 +72,57 @@ while(!salir)
 					matrix_t* m2 = new matrix_t;
 
 					//recibe rows m1
-    				std::cout<<"3.1\n";
+    				
 					recvMSG(clientID,(void**)&m1buff, &dataLen);
 					memcpy(&m1->rows,m1buff,sizeof(int));
 					delete m1buff;
 					
 					//recibe cols m1
-    				std::cout<<"3.2\n";
+    				
 					recvMSG(clientID,(void**)&m1buff, &dataLen);
 					memcpy(&m1->cols,m1buff,sizeof(int));
 					delete m1buff;
 					
 					//recibe data m1
-   				 	std::cout<<"3.3\n";
+   				 	
 					recvMSG(clientID,(void**)&m1buff, &dataLen);
 					//memcpy(&m1->data,buff,sizeof(int)*m1->rows*m1->cols);
 					m1->data = (int*)m1buff;
+					delete m1buff;
 
 					//recibe rows m2
-    				std::cout<<"3.4\n";
+    				
 					recvMSG(clientID,(void**)&m2buff, &dataLen);
 					memcpy(&m2->rows,m2buff,sizeof(int));
 					delete m2buff;
 					
 					//recibe cols m2
-    				std::cout<<"3.5\n";
+    				
 					recvMSG(clientID,(void**)&m2buff, &dataLen);
 					memcpy(&m2->cols,m2buff,sizeof(int));
 					delete m2buff;
 					
 					//recibe data m2
-    				std::cout<<"3.6\n";
+    				
 					recvMSG(clientID,(void**)&m2buff, &dataLen);
 					//memcpy(&m2->data,buff,sizeof(int)*m2->rows*m2->cols);
 					m2->data = (int*)m2buff;
 
 					//guarda la matriz resultado en una nueva matriz
-    				std::cout<<"3.7\n";
+    				
 					matrizResultado = matrixImp->multMatrices(m1, m2);					
 					delete m1;
 					delete m2;
 
+				
 					//envia al cliente la matriz por partes
-    				std::cout<<"3.8\n";
+    				
 					sendMSG(clientID,(void*)&matrizResultado->rows,sizeof(int));
-					std::cout<<"3.8.2\n";					
+									
 					sendMSG(clientID,(void*)&matrizResultado->cols,sizeof(int));
-					std::cout<<"3.8.3\n";
-					sendMSG(clientID,(void*)matrizResultado->data,sizeof(int)*matrizResultado->rows*matrizResultado->cols);
-					std::cout<<"3.8.4\n";
+					
+					sendMSG(clientID,(void*)&matrizResultado->data,sizeof(int)*matrizResultado->rows*matrizResultado->cols);
+					
 					delete matrizResultado;
 					
 				}break;
@@ -190,10 +205,13 @@ while(!salir)
 				}break;
 				case EXIT_MATRIX:
 				{
+				std::cout<<"8.1\n";
 					salir=true;
 					char opOK=OP_OK;
 					std::cout<<"Salida\n";
+					std::cout<<"8.2\n";
 					sendMSG(clientID,(void*)&opOK,sizeof(char));
+					std::cout<<"8.3\n";
 				}break;
 				
 				default:
@@ -202,7 +220,8 @@ while(!salir)
 				
 			}
 		}
-	//switch (tipo_op)
-		//si es suma
+		
+	
 	}
+	
 }

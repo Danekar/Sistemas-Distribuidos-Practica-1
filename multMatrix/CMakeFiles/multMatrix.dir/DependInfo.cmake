@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/main_multMatrix.cpp" "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o"
-  "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/multmatrix.cpp" "/home/danekar/Documents/Sistemas-Distribuidos-Practica-1-main/multMatrix/CMakeFiles/multMatrix.dir/multmatrix.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/main_multMatrix.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles/multMatrix.dir/multmatrix.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
