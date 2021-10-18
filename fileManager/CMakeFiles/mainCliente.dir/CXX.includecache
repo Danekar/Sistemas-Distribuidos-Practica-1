@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
 iostream
 -
 stdio.h
@@ -22,27 +22,21 @@ vector
 dirent.h
 -
 utils.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
 
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.cpp
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.cpp
 filemanager_stub.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
 
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
 filemanager.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
 
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/mainCliente.cpp
-iostream
--
-stdio.h
--
-stdlib.h
--
-filemanager_stub.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
-
+<<<<<<< HEAD
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
+=======
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
+>>>>>>> eee855c14979ddc5adc05e13fce8cf405149c590
 sys/types.h
 -
 sys/socket.h

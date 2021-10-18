@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager
+CMAKE_SOURCE_DIR = "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager
+CMAKE_BINARY_DIR = "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mainServidor.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/mainServidor.dir/flags.make
 
 CMakeFiles/mainServidor.dir/mainServidor.cpp.o: CMakeFiles/mainServidor.dir/flags.make
 CMakeFiles/mainServidor.dir/mainServidor.cpp.o: mainServidor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mainServidor.dir/mainServidor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/mainServidor.cpp.o -c /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mainServidor.dir/mainServidor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/mainServidor.cpp.o -c "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp"
 
 CMakeFiles/mainServidor.dir/mainServidor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mainServidor.dir/mainServidor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp > CMakeFiles/mainServidor.dir/mainServidor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp" > CMakeFiles/mainServidor.dir/mainServidor.cpp.i
 
 CMakeFiles/mainServidor.dir/mainServidor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mainServidor.dir/mainServidor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp -o CMakeFiles/mainServidor.dir/mainServidor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp" -o CMakeFiles/mainServidor.dir/mainServidor.cpp.s
 
 CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o: CMakeFiles/mainServidor.dir/flags.make
 CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o: filemanager_imp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o -c /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o -c "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp"
 
 CMakeFiles/mainServidor.dir/filemanager_imp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mainServidor.dir/filemanager_imp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp > CMakeFiles/mainServidor.dir/filemanager_imp.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp" > CMakeFiles/mainServidor.dir/filemanager_imp.cpp.i
 
 CMakeFiles/mainServidor.dir/filemanager_imp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mainServidor.dir/filemanager_imp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp -o CMakeFiles/mainServidor.dir/filemanager_imp.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp" -o CMakeFiles/mainServidor.dir/filemanager_imp.cpp.s
 
 CMakeFiles/mainServidor.dir/filemanager.cpp.o: CMakeFiles/mainServidor.dir/flags.make
 CMakeFiles/mainServidor.dir/filemanager.cpp.o: filemanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mainServidor.dir/filemanager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/filemanager.cpp.o -c /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mainServidor.dir/filemanager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/filemanager.cpp.o -c "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp"
 
 CMakeFiles/mainServidor.dir/filemanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mainServidor.dir/filemanager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp > CMakeFiles/mainServidor.dir/filemanager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" > CMakeFiles/mainServidor.dir/filemanager.cpp.i
 
 CMakeFiles/mainServidor.dir/filemanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mainServidor.dir/filemanager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp -o CMakeFiles/mainServidor.dir/filemanager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" -o CMakeFiles/mainServidor.dir/filemanager.cpp.s
 
 CMakeFiles/mainServidor.dir/utils.cpp.o: CMakeFiles/mainServidor.dir/flags.make
 CMakeFiles/mainServidor.dir/utils.cpp.o: utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mainServidor.dir/utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/utils.cpp.o -c /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mainServidor.dir/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mainServidor.dir/utils.cpp.o -c "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp"
 
 CMakeFiles/mainServidor.dir/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mainServidor.dir/utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp > CMakeFiles/mainServidor.dir/utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp" > CMakeFiles/mainServidor.dir/utils.cpp.i
 
 CMakeFiles/mainServidor.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mainServidor.dir/utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp -o CMakeFiles/mainServidor.dir/utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp" -o CMakeFiles/mainServidor.dir/utils.cpp.s
 
 # Object files for target mainServidor
 mainServidor_OBJECTS = \
@@ -125,7 +125,7 @@ mainServidor: CMakeFiles/mainServidor.dir/filemanager.cpp.o
 mainServidor: CMakeFiles/mainServidor.dir/utils.cpp.o
 mainServidor: CMakeFiles/mainServidor.dir/build.make
 mainServidor: CMakeFiles/mainServidor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable mainServidor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable mainServidor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mainServidor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/mainServidor.dir/clean:
 .PHONY : CMakeFiles/mainServidor.dir/clean
 
 CMakeFiles/mainServidor.dir/depend:
-	cd /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/mainServidor.dir/depend
 

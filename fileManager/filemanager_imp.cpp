@@ -4,6 +4,7 @@ FileManager_imp::FileManager_imp(int clientID){
     FileManager* filemanagerImp = new FileManager("dirprueba");
     salir = false;
     this->clientID = clientID;
+    
 }
 
 FileManager_imp::~FileManager_imp(){
@@ -34,75 +35,40 @@ void FileManager_imp::exec(){
             
             	case LIST_FILES:
             	{
+            	
+  		FileManager* fileManager = new FileManager("dirprueba");
+            	vector<string*>* vfiles=fileManager->listFiles();
+            	
             	cout<<"1.1\n";
-            	vector<string*>* flist=new vector<string*>();
+            	sendMSG(clientID,(void*)&vfiles,sizeof(vector<string*>)*sizeof(vfiles));
             	cout<<"1.2\n";
+<<<<<<< HEAD
+            	delete fileManager;
+            	delete vfiles;
+            	
+            	
+=======
             	flist = filemanagerImp->listFiles();
             	cout<<"1.3\n";
-            	sendMSG(clientID,(void*)&flist,sizeof(vector<string*>));
+            	sendMSG(clientID,(void*)&flist,sizeof(vector<string*>)*sizeof(flist));
             	cout<<"1.4\n";
-            	
-            	
+>>>>>>> eee855c14979ddc5adc05e13fce8cf405149c590
             	}break;
-            	
-            	
-            	
-            	case READ_FILES:
-            	{
-            	char* buff=nullptr;
-            	char* filename=nullptr;
-            	char* data=nullptr;
-            	unsigned long int* dataLen2 =nullptr;
-            	recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&filename, buff, dataLen);
-		delete buff;
-		
-		filemanagerImp->readFile(filename,data,*dataLen2);
-		sendMSG(clientID,(void*)&data, sizeof(char)*sizeof(dataLen2));
-		sendMSG(clientID,(void*)&dataLen2,sizeof(unsigned long int));
-		
-            	delete filename;
-            	delete data;
-            	delete dataLen2;
-            	
-            	}break;
-            	
-            	case WRITE_FILES:
-            	{
-            	char* buff=nullptr;
-            	char* filename=nullptr;
-            	char* data=nullptr;
-            	unsigned long int* dataLen2=nullptr;
-            	
-            	recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&filename, buff, dataLen);
-		delete buff;
-		
-		recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&filename, buff, dataLen);
-		delete buff;
-		
-		recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&dataLen2, buff, dataLen);
-		delete buff;
-            	
-            	filemanagerImp->writeFile(filename,data,*dataLen2);
-            	
-            	}break;
-            	
-            	case FREE_LISTED_FILES:
-            	{
-            	
-            	vector<string*>* flist=new vector<string*>();
-            	
-            	recvMSG(clientID,(void**)&flist,&dataLen);
-            	
-            	filemanagerImp->freeListedFiles(flist);
-            	delete flist;
-            	
-            	}break;
-            	
-            	  
+                case READ_FILES:
+                {
+
+                }
+                break;
+                case WRITE_FILES:
+                {
+
+                }
+                break;
+                case FREE_LISTED_FILES:
+                {
+
+                }
+                break;       	  
                 case EXIT_FILES:
                 {
                     salir=true;

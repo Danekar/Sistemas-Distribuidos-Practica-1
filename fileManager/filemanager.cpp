@@ -21,6 +21,7 @@ FileManager::FileManager(string path){
           }
       }
       closedir (dir);
+      
 
     } else {
       /* could not open directory */
