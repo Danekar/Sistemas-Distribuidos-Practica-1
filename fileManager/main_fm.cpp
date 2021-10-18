@@ -1,9 +1,13 @@
 #include <iostream>
 #include "filemanager.h"
 
+using namespace std;
+
 int main(int argc,char** argv)
 {
-    FileManager *fm=new FileManager("./dirprueba/");
+	cout<<"Estoy en el main\n";
+    FileManager *fm=new FileManager("dirprueba");
+    cout<<"He creado el file manager\n";
     vector<string*>* vfiles=fm->listFiles();
     cout<<"Lista de ficheros en el directorio de prueba:\n";
     for(unsigned int i=0;i<vfiles->size();++i)

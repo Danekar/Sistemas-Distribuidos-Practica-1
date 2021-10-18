@@ -7,8 +7,7 @@
  * @param path Ruta al directorio que se desa usar
  */
 
-FileManager::FileManager(string path)
-{
+FileManager::FileManager(string path){
     this->dirPath=path;
     DIR *dir;
     struct dirent *ent;
@@ -22,6 +21,7 @@ FileManager::FileManager(string path)
           }
       }
       closedir (dir);
+
     } else {
       /* could not open directory */
         string* f=new string("ERROR: No existe el fichero o directorio");
@@ -37,12 +37,13 @@ FileManager::FileManager(string path)
  * después de haber sido usada. Para ello se ofrece la función "freeListedFiles"
  */
 vector<string*>* FileManager::listFiles(){
-
     vector<string*>* flist=new vector<string*>();
+    cout<<"lo creo el flist\n";
     for(map<string,string*>::iterator i=files.begin();i!= files.end();++i)
     {
         flist->push_back(new string(i->first));
     }
+    cout<<"hago magia\n";
     return flist;
 }
 /**

@@ -1,7 +1,7 @@
 #include "filemanager_imp.h"
 
 FileManager_imp::FileManager_imp(int clientID){
-    FileManager* filemanagerImp = new FileManager("hola");
+    FileManager* filemanagerImp = new FileManager("dirprueba");
     salir = false;
     this->clientID = clientID;
 }
@@ -30,8 +30,22 @@ void FileManager_imp::exec(){
             delete msg;
             
             switch(tipo_op)
-            {   
-                case EXIT_FILEM:
+            { 
+            
+            	case LIST_FILES:
+            	{
+            	cout<<"1.1\n";
+            	vector<string*>* flist=new vector<string*>();
+            	cout<<"1.2\n";
+            	flist = filemanagerImp->listFiles();
+            	cout<<"1.3\n";
+            	sendMSG(clientID,(void*)&flist,sizeof(vector<string*>));
+            	cout<<"1.4\n";
+            	
+            	
+            	}break;
+            	  
+                case EXIT_FILES:
                 {
                     salir=true;
                     char opOK=OP_OK;

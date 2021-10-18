@@ -3,7 +3,13 @@
 
 #include "filemanager.h"
 
-#define EXIT_FILEM 'E'
+#define LIST_FILES    	 'L'
+#define READ_FILES      'R'
+#define WRITE_FILES     'W'
+#define EXIT_FILES      'E'
+#define FREE_LISTED_FILES 'I'
+
+#define OP_EXIT 'E'
 #define OP_OK 'O'
 
 using namespace std;
