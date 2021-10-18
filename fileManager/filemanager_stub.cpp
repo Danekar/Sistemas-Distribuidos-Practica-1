@@ -62,7 +62,6 @@ void FileManager_stub::readFile(char* fileName, char* &data, unsigned long int &
 void FileManager_stub::writeFile(char* fileName, char* data, unsigned long int dataLength){
 	char msg = WRITE_FILES;
 	char* buff = nullptr;
-	int dataLen = 0;
 
 	//Envio del Mensaje de opciones
 	sendMSG(serverID,(void*)&msg,sizeof(char));
