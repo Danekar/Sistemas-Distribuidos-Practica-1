@@ -79,9 +79,12 @@ void FileManager_stub::freeListedFiles(vector<string*>* fileList){
 	char msg = FREE_LISTED_FILES;
 	char* buff = nullptr;
 	int dataLen = 0;
+	int numFiles = sizeof(fileList);
 
 	//Envio del Mensaje de opciones
 	sendMSG(serverID,(void*)&msg,sizeof(char));
+
+	sendMSG(serverID,(void*)&fileList, sizeof(char)*sizeof(fileList);
 }
 
 FileManager_stub::~FileManager_stub(){
