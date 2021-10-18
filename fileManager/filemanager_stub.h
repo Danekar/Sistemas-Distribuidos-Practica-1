@@ -5,15 +5,15 @@
 
 using namespace std;
 
-#define LIST_FILES    	 'L'
-#define READ_FILES      'R'
-#define WRITE_FILES     'W'
-#define EXIT_FILES      'E'
-#define FREE_LISTED_FILES 'I'
+#define LIST_FILES    	    'L'
+#define READ_FILES          'R'
+#define WRITE_FILES         'W'
+#define EXIT_FILES          'E'
+#define FREE_LISTED_FILES   'I'
 
 
-#define OP_EXIT         'E'
-#define OP_OK           'O'
+#define OP_EXIT             'E'
+#define OP_OK               'O'
 
 #define IP_SERVER "127.0.0.1"
 #define PORT_SERVER 3301

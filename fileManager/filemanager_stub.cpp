@@ -39,13 +39,32 @@ vector<string*>* FileManager_stub::listFiles(){
 }
 
 void FileManager_stub::readFile(char* fileName, char* &data, unsigned long int & dataLength){
+	char msg = READ_FILES;
+	char* buff = nullptr;
+	int dataLen = 0;
 
+	//Envio del Mensaje de opciones
+	sendMSG(serverID,(void*)&msg,sizeof(char));
 }
 
 void FileManager_stub::writeFile(char* fileName, char* data, unsigned long int dataLength){
-	
+	char msg = WRITE_FILES;
+	char* buff = nullptr;
+	int dataLen = 0;
+
+	//Envio del Mensaje de opciones
+	sendMSG(serverID,(void*)&msg,sizeof(char));
 }
 
 void FileManager_stub::freeListedFiles(vector<string*>* fileList){
+	char msg = FREE_LISTED_FILES;
+	char* buff = nullptr;
+	int dataLen = 0;
 
+	//Envio del Mensaje de opciones
+	sendMSG(serverID,(void*)&msg,sizeof(char));
+}
+
+FileManager_stub::~FileManager_stub(){
+	
 }
