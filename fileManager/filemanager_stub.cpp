@@ -85,5 +85,19 @@ void FileManager_stub::freeListedFiles(vector<string*>* fileList){
 }
 
 FileManager_stub::~FileManager_stub(){
-
+	char msg = OP_EXIT;
+	//Envio del mensaje de opción
+	sendMSG(serverID,(void*)&msg,sizeof(char));
+	char* buff=nullptr;
+	int dataLen=0;
+	char state=0;
+	
+	//Recibir respuesta del servidor
+	recvMSG(serverID,(void**)&buff,&dataLen);
+	memcpy(&state,buff,sizeof(char));
+	delete buff;
+	
+	if(state!=OP_OK){
+		std::cout<<"ERROR cerrando conexion\n";
+	}
 }
