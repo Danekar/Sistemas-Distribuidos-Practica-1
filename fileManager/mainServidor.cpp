@@ -7,7 +7,7 @@
 using namespace std;
 
 void threadClient(int clientID){
-	FileManager_imp* filemanagerImp = new FileManager_imp(clientID);
+	FileManager_imp* filemanagerImp = new FileManager_imp(clientID, "dirprueba");
 	filemanagerImp->exec();
 	delete filemanagerImp;
 }

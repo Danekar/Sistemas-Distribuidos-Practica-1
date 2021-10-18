@@ -21,7 +21,7 @@ private:
     bool salir = false;
     int clientID = 0;
 public:
-    FileManager_imp(int clientID);
+    FileManager_imp(int clientID, string path);
     ~FileManager_imp();
     void exec();
 };
