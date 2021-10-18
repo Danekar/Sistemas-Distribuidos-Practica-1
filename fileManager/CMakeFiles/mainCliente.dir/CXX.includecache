@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp
-filemanager.h
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
-
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
 iostream
 -
@@ -35,20 +31,6 @@ filemanager_stub.h
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
 filemanager.h
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
-
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/mainCliente.cpp
-iostream
--
-stdio.h
--
-stdlib.h
--
-filemanager_stub.h
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
-
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp
-utils.h
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
 
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
 sys/types.h

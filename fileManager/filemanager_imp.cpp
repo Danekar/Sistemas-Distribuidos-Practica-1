@@ -39,12 +39,24 @@ void FileManager_imp::exec(){
             	cout<<"1.2\n";
             	flist = filemanagerImp->listFiles();
             	cout<<"1.3\n";
-            	sendMSG(clientID,(void*)&flist,sizeof(vector<string*>));
+            	sendMSG(clientID,(void*)&flist,sizeof(vector<string*>)*sizeof(flist));
             	cout<<"1.4\n";
-            	
-            	
             	}break;
-            	  
+                case READ_FILES:
+                {
+
+                }
+                break;
+                case WRITE_FILES:
+                {
+
+                }
+                break;
+                case FREE_LISTED_FILES:
+                {
+
+                }
+                break;       	  
                 case EXIT_FILES:
                 {
                     salir=true;

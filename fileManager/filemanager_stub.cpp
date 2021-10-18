@@ -57,6 +57,7 @@ void FileManager_stub::readFile(char* fileName, char* &data, unsigned long int &
 	recvMSG(serverID,(void**)&buff,&dataLen);
 	memcpy(&dataLength, buff, dataLen);
 	delete buff;
+	
 }
 
 void FileManager_stub::writeFile(char* fileName, char* data, unsigned long int dataLength){
@@ -84,7 +85,7 @@ void FileManager_stub::freeListedFiles(vector<string*>* fileList){
 	//Envio del Mensaje de opciones
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 
-	sendMSG(serverID,(void*)&fileList, sizeof(char)*sizeof(fileList);
+	sendMSG(serverID,(void*)&fileList, sizeof(char)*sizeof(fileList));
 }
 
 FileManager_stub::~FileManager_stub(){
