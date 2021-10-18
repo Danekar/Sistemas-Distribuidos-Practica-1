@@ -27,6 +27,7 @@ int main (int argc, char** argv){
     cout<<"Liberando lista de ficheros:\n";
     fm->freeListedFiles(vfiles);
     cout<<"Liberando datos de fichero leído:\n";
+    fm->~FileManager_stub();
 
     delete[] data;
    
