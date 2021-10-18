@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp
+filemanager.h
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
+
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
 iostream
 -
@@ -23,14 +27,6 @@ dirent.h
 -
 utils.h
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
-
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp
-filemanager_imp.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.h
-
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.h
-filemanager.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
 
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
 sys/types.h

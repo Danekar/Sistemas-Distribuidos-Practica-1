@@ -44,64 +44,6 @@ void FileManager_imp::exec(){
             	
             	
             	}break;
-            	
-            	
-            	
-            	case READ_FILES:
-            	{
-            	char* buff=nullptr;
-            	char* filename=nullptr;
-            	char* data=nullptr;
-            	unsigned long int* dataLen2 =nullptr;
-            	recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&filename, buff, dataLen);
-		delete buff;
-		
-		filemanagerImp->readFile(filename,data,*dataLen2);
-		sendMSG(clientID,(void*)&data, sizeof(char)*sizeof(dataLen2));
-		sendMSG(clientID,(void*)&dataLen2,sizeof(unsigned long int));
-		
-            	delete filename;
-            	delete data;
-            	delete dataLen2;
-            	
-            	}break;
-            	
-            	case WRITE_FILES:
-            	{
-            	char* buff=nullptr;
-            	char* filename=nullptr;
-            	char* data=nullptr;
-            	unsigned long int* dataLen2=nullptr;
-            	
-            	recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&filename, buff, dataLen);
-		delete buff;
-		
-		recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&filename, buff, dataLen);
-		delete buff;
-		
-		recvMSG(clientID,(void**)&buff,&dataLen);
-		memcpy(&dataLen2, buff, dataLen);
-		delete buff;
-            	
-            	filemanagerImp->writeFile(filename,data,*dataLen2);
-            	
-            	}break;
-            	
-            	case FREE_LISTED_FILES:
-            	{
-            	
-            	vector<string*>* flist=new vector<string*>();
-            	
-            	recvMSG(clientID,(void**)&flist,&dataLen);
-            	
-            	filemanagerImp->freeListedFiles(flist);
-            	delete flist;
-            	
-            	}break;
-            	
             	  
                 case EXIT_FILES:
                 {
