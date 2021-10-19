@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/filemanager.cpp.o"
-  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o"
-  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/mainServidor.cpp.o"
-  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/utils.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/filemanager.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_imp.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/filemanager_imp.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/mainServidor.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/mainServidor.cpp.o"
+  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainServidor.dir/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

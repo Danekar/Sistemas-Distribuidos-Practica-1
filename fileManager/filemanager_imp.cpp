@@ -1,7 +1,7 @@
 #include "filemanager_imp.h"
 
 FileManager_imp::FileManager_imp(int clientID, string path){
-    FileManager* filemanagerImp = new FileManager(path);
+    filemanagerImp = new FileManager(path);
     salir = false;
     this->clientID = clientID;
 }
@@ -39,8 +39,16 @@ void FileManager_imp::exec(){
             	   cout<<"1.2\n";
             	   flist = filemanagerImp->listFiles();
             	   cout<<"1.3\n";
-            	   sendMSG(clientID,(void*)&flist,sizeof(vector<string*>)*sizeof(flist));
+            	   cout<<"Tamaño de flist: "<<flist->size()<<"\n";
+            	   int tamano = flist->size();
+            	   sendMSG(clientID,(void*)&tamano, sizeof(int));
             	   cout<<"1.4\n";
+            	  for(unsigned int i=0;i<flist->size();++i){
+            	  cout<<"Fichero: "<<flist->at(i)->c_str()<<endl;
+       	  sendMSG(clientID,(void*)flist->at(i)->c_str(), strlen(flist->at(i)->c_str()));
+   		 }
+   		 
+    	       cout<<"1.5\n";
             	}break;
                 case READ_FILES:
                 {

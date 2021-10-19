@@ -22,18 +22,31 @@ vector<string*>* FileManager_stub::listFiles(){
 	char msg = LIST_FILES;
 	char* buff = nullptr;
 	int dataLen = 0;
+	int tamanoDeVector=0;
+	
+	
+	
 	
 	cout<<"1.1\n";
 	vector<string*>* flist=new vector<string*>();
 	cout<<"1.2\n";
 	sendMSG(serverID,(void*)&msg,sizeof(char));
-	
 	cout<<"1.3\n";
 	recvMSG(serverID,(void**)&buff,&dataLen);
-	cout<<"1.3.1\n";
-	memcpy(&flist,buff,dataLen);
+	memcpy(&tamanoDeVector,buff,dataLen);
 	delete buff;
+	
 	cout<<"1.4\n";
+	for(unsigned int i=0;i<tamanoDeVector;++i){
+   	recvMSG(serverID,(void**)&buff,&dataLen);
+   	string *filename = new string;
+	filename->append(buff);
+   	flist->push_back(filename);   	   	
+	
+	
+	delete buff;
+   	}
+	cout<<"1.5\n";
 	
 	return flist;
 }

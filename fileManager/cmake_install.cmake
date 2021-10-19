@@ -1,4 +1,4 @@
-# Install script for directory: /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager
+# Install script for directory: /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
