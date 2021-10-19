@@ -34,39 +34,49 @@ void FileManager_imp::exec(){
             
             	case LIST_FILES:
             	{
-            	   cout<<"1.1\n";
+            	
+            	
             	   vector<string*>* flist=new vector<string*>();
-            	   cout<<"1.2\n";
+            	
+            	
             	   flist = filemanagerImp->listFiles();
-            	   cout<<"1.3\n";
-            	   cout<<"Tamaño de flist: "<<flist->size()<<"\n";
+  
+  
             	   int tamano = flist->size();
             	   sendMSG(clientID,(void*)&tamano, sizeof(int));
-            	   cout<<"1.4\n";
+            	
             	  for(unsigned int i=0;i<flist->size();++i){
-            	  cout<<"Fichero: "<<flist->at(i)->c_str()<<endl;
+            	 
        	  sendMSG(clientID,(void*)flist->at(i)->c_str(), strlen(flist->at(i)->c_str()));
    		 }
    		 
-    	       cout<<"1.5\n";
+    	       
             	}break;
                 case READ_FILES:
                 {
                     char* buff=nullptr;
                     char* filename=nullptr;
                     char* data=nullptr;
-                    unsigned long int* dataLen2 =nullptr;
+                    unsigned long int dataLen2 =0;
+               
                     recvMSG(clientID,(void**)&buff,&dataLen);
-                    memcpy(&filename, buff, dataLen);
-                    delete buff;
-                    
-                    filemanagerImp->readFile(filename,data,*dataLen2);
+                 
+               	
+                    //memcpy(&filename, buff, dataLen);
+                    //delete buff;
+                 
+          cout<<buff<<"\n";
+                    filemanagerImp->readFile(buff,data,dataLen2);
+                   
+ 
                     sendMSG(clientID,(void*)&data, sizeof(char)*sizeof(dataLen2));
+
                     sendMSG(clientID,(void*)&dataLen2,sizeof(unsigned long int));
-            
+
+            		cout<<data<<"\n";
                     delete filename;
                     delete data;
-                    delete dataLen2;
+           
                 
                 }break;             
                 case WRITE_FILES:
@@ -74,21 +84,21 @@ void FileManager_imp::exec(){
                     char* buff=nullptr;
                     char* filename=nullptr;
                     char* data=nullptr;
-                    unsigned long int* dataLen2=nullptr;
+                    unsigned long int dataLen2=0;
                     
-                    recvMSG(clientID,(void**)&buff,&dataLen);
-                    memcpy(&filename, buff, dataLen);
-                    delete buff;
+                    recvMSG(clientID,(void**)&filename,&dataLen);
+                   // memcpy(&filename, buff, dataLen);
+                    //delete buff;
                     
-                    recvMSG(clientID,(void**)&buff,&dataLen);
-                    memcpy(&filename, buff, dataLen);
-                    delete buff;
+                    recvMSG(clientID,(void**)&data,&dataLen);
+                    //memcpy(&filename, buff, dataLen);
+                    //delete buff;
 
-                    recvMSG(clientID,(void**)&buff,&dataLen);
-                    memcpy(&dataLen2, buff, dataLen);
+                    recvMSG(clientID,(void**)&dataLen2,&dataLen);
+                   // memcpy(&dataLen2, buff, dataLen);
                     delete buff;
-                
-                    filemanagerImp->writeFile(filename,data,*dataLen2);
+              
+                    filemanagerImp->writeFile(filename,data,dataLen2);
                 
                 }break;
                 

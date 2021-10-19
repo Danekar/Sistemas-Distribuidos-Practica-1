@@ -24,13 +24,19 @@ dirent.h
 utils.h
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
 
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.cpp
-filemanager_stub.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
-
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
 filemanager.h
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.h
+
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/mainCliente.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+filemanager_stub.h
+/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.h
 
 /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.h
 sys/types.h

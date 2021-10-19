@@ -27,26 +27,32 @@ vector<string*>* FileManager_stub::listFiles(){
 	
 	
 	
-	cout<<"1.1\n";
+	
 	vector<string*>* flist=new vector<string*>();
-	cout<<"1.2\n";
+	
 	sendMSG(serverID,(void*)&msg,sizeof(char));
-	cout<<"1.3\n";
+	
+	//Pillamos el tamaño del vector
 	recvMSG(serverID,(void**)&buff,&dataLen);
 	memcpy(&tamanoDeVector,buff,dataLen);
 	delete buff;
 	
-	cout<<"1.4\n";
+	
+	//Vemos cuantas iteraciones seran mirando pues el tamañao que conseguimos anteriormente y por cada iteracion le vamos metiendo un nuevo string al vector de strings
 	for(unsigned int i=0;i<tamanoDeVector;++i){
+	//recibimos el nombre del fichero
    	recvMSG(serverID,(void**)&buff,&dataLen);
+   	//creamos un nuevo STRING PUNTERO(no se si esto es etico o no)
    	string *filename = new string;
+   	//le metemos lo que tenia el buffer que es un CHAR PUNTERO y el filename un STRING PUNTERO y los unimos con append
 	filename->append(buff);
+	//por ultimo metemos el vector de STRING PUNTERO en el VECTOR DE STRING DE PUNTERO.
    	flist->push_back(filename);   	   	
 	
-	
+	//limpimos el buffer
 	delete buff;
    	}
-	cout<<"1.5\n";
+
 	
 	return flist;
 }
@@ -60,16 +66,20 @@ void FileManager_stub::readFile(char* fileName, char* &data, unsigned long int &
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 
 	//Envio del nombre del fichero
-	sendMSG(serverID,(void*)&fileName, sizeof(char)*strlen(fileName));
+	sendMSG(serverID,(void*)fileName, strlen(fileName));
 
 	//Recibir conetnido del fichero
 	recvMSG(serverID,(void**)&buff,&dataLen);
+
 	memcpy(&data, buff, dataLen);
 	delete buff;
+
 	//Recibir tamaño del fichero
 	recvMSG(serverID,(void**)&buff,&dataLen);
+
 	memcpy(&dataLength, buff, dataLen);
 	delete buff;
+
 	
 }
 
@@ -81,9 +91,9 @@ void FileManager_stub::writeFile(char* fileName, char* data, unsigned long int d
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 
 	//Envio del nombre del fichero
-	sendMSG(serverID,(void*)&fileName, sizeof(char)*strlen(fileName));
+	sendMSG(serverID,(void*)fileName, strlen(fileName));
 	//Envio de contenido del fichero
-	sendMSG(serverID,(void*)&data, sizeof(char)*strlen(data));
+	sendMSG(serverID,(void*)data,strlen(data));
 	//Envio tamaño del fichero
 	sendMSG(serverID,(void*)&dataLength,sizeof(long int)*sizeof(dataLength));
 
