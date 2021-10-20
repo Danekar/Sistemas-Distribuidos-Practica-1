@@ -60,7 +60,6 @@ int menu(int opciones){
 			case 3:
 			{
 				if(row > 0 || col > 0){
-					matrizCreadaClient = new matrix_t[1];
 					cout<<"Inserta las dimensiones de la matriz\n";
 					cin >> row >> col;
 					matrizCreadaClient->rows = row;
