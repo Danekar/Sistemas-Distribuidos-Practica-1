@@ -6,38 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/mainServidorMultMatrix.cpp
-iostream
--
-stdlib.h
--
-stdio.h
--
-thread
--
-multmatrix_imp.h
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.h
-
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp
-multmatrix.h
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
-multmatrix.h
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
-stdio.h
--
-stdlib.h
--
-iostream
--
-string
--
-cstring
--
-sys/types.h
--
-unistd.h
--
-
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
 
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_imp.cpp
@@ -53,10 +21,6 @@ stdlib.h
 -
 multmatrix.h
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
-utils.h
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/utils.h
-
-/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/utils.cpp
 utils.h
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/utils.h
 

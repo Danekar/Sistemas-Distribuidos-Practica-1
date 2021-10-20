@@ -205,13 +205,10 @@ while(!salir)
 				}break;
 				case EXIT_MATRIX:
 				{
-				std::cout<<"8.1\n";
 					salir=true;
 					char opOK=OP_OK;
 					std::cout<<"Salida\n";
-					std::cout<<"8.2\n";
 					sendMSG(clientID,(void*)&opOK,sizeof(char));
-					std::cout<<"8.3\n";
 				}break;
 				
 				default:
