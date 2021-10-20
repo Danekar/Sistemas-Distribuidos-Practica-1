@@ -77,6 +77,9 @@ int menu(int opciones){
 			}
 			break;
 			case 0:
+				delete m1RandClient;
+				delete m1IdenClient;
+				delete matrizCreadaClient;
 				salir= true;
 			break;
 			default:
