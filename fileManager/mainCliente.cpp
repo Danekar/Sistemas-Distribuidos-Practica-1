@@ -20,16 +20,20 @@ int main (int argc, char** argv){
     cout<<"Leyendo el primer fichero del directorio de prueba:\n";
 
     char* data=nullptr;
+    //char cosa[]="jorge";
+    //char* dataEscribir=cosa;
     unsigned long int fileLen=0;
-    fm->readFile(&(*(vfiles->at(1)))[0],data,fileLen);
+    fm->readFile(&(*(vfiles->at(0)))[0],data,fileLen);
     cout<<"Escribiendo el primer fichero del directorio de prueba:\n";
+    cout<<"Esto es el fileLen en el main: "<<fileLen<<"\n";
     fm->writeFile(&(*(vfiles->at(0)))[0],data,fileLen);
     cout<<"Liberando lista de ficheros:\n";
     fm->freeListedFiles(vfiles);
     cout<<"Liberando datos de fichero leído:\n";
-    fm->~FileManager_stub();
+   fm->~FileManager_stub();
+   delete[] data;
+cout<<"Confirmadisimo\n";
 
-    delete[] data;
    
 	return 0;
 }

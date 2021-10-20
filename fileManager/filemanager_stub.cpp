@@ -38,7 +38,7 @@ vector<string*>* FileManager_stub::listFiles(){
 	delete buff;
 	
 	
-	//Vemos cuantas iteraciones seran mirando pues el tamañao que conseguimos anteriormente y por cada iteracion le vamos metiendo un nuevo string al vector de strings
+	//Vemos cuantas iteraciones seran mirando pues el tamañao que conseguimos anteriormente y por cada iteracion le vamos metiendo un nuevo 		string al vector de strings
 	for(unsigned int i=0;i<tamanoDeVector;++i){
 	//recibimos el nombre del fichero
    	recvMSG(serverID,(void**)&buff,&dataLen);
@@ -69,61 +69,74 @@ void FileManager_stub::readFile(char* fileName, char* &data, unsigned long int &
 	sendMSG(serverID,(void*)fileName, strlen(fileName));
 
 	//Recibir conetnido del fichero
-	recvMSG(serverID,(void**)&buff,&dataLen);
+	recvMSG(serverID,(void**)&data,&dataLen);
 
-	memcpy(&data, buff, dataLen);
-	delete buff;
+	//memcpy(data, buff, dataLen);
+	//cout<<data<<"\n";
+	//delete buff;
 
 	//Recibir tamaño del fichero
-	recvMSG(serverID,(void**)&buff,&dataLen);
+	recvMSG(serverID,(void**)&dataLength,&dataLen);
 
-	memcpy(&dataLength, buff, dataLen);
-	delete buff;
+	//memcpy(&dataLength, buff, dataLen);
+//	cout<<dataLength<<"\n";
+//	delete buff;
 
 	
 }
 
 void FileManager_stub::writeFile(char* fileName, char* data, unsigned long int dataLength){
 	char msg = WRITE_FILES;
-	char* buff = nullptr;
+	
+
 
 	//Envio del Mensaje de opciones
 	sendMSG(serverID,(void*)&msg,sizeof(char));
-
+	
 	//Envio del nombre del fichero
-	sendMSG(serverID,(void*)fileName, strlen(fileName));
+	sendMSG(serverID,(void*)fileName, strlen(fileName)+1);
 	//Envio de contenido del fichero
-	sendMSG(serverID,(void*)data,strlen(data));
+	
+	sendMSG(serverID,(void*)data,strlen(data)+1);
 	//Envio tamaño del fichero
-	sendMSG(serverID,(void*)&dataLength,sizeof(long int)*sizeof(dataLength));
-
+	
+	sendMSG(serverID,(void*)&dataLength,sizeof(unsigned long int));
+	
 }
 
 void FileManager_stub::freeListedFiles(vector<string*>* fileList){
 	char msg = FREE_LISTED_FILES;
 	char* buff = nullptr;
 	int dataLen = 0;
-	int numFiles = sizeof(fileList);
+	 
 
 	//Envio del Mensaje de opciones
 	sendMSG(serverID,(void*)&msg,sizeof(char));
+	
+	 int tamano = fileList->size();
+	 cout<<tamano<<"\n";
+         sendMSG(serverID,(void*)&tamano, sizeof(int));
 
-	sendMSG(serverID,(void*)&fileList, sizeof(char)*sizeof(fileList));
+	for(unsigned int i=0;i<fileList->size();++i){
+          cout<<"4.2\n";
+      	sendMSG(serverID,(void*)fileList->at(i)->c_str(), strlen(fileList->at(i)->c_str()));
+   	}
 }
 
 FileManager_stub::~FileManager_stub(){
 	char msg = OP_EXIT;
+	cout<<"5.1\n";
 	//Envio del mensaje de opción
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 	char* buff=nullptr;
 	int dataLen=0;
 	char state=0;
-	
+	cout<<"5.2\n";
 	//Recibir respuesta del servidor
 	recvMSG(serverID,(void**)&buff,&dataLen);
 	memcpy(&state,buff,sizeof(char));
 	delete buff;
-	
+	cout<<"5.3\n";
 	if(state!=OP_OK){
 		std::cout<<"ERROR cerrando conexion\n";
 	}
