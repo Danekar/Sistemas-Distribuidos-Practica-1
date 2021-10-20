@@ -6,11 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/main_multMatrix.cpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
 multmatrix.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
+
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.cpp
 multmatrix.h
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
+multmatrix.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
 stdio.h
 -
 stdlib.h
@@ -26,5 +36,5 @@ sys/types.h
 unistd.h
 -
 
-/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
 

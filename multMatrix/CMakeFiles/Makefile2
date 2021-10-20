@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix
+CMAKE_SOURCE_DIR = "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix
+CMAKE_BINARY_DIR = "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -78,14 +78,14 @@ clean: CMakeFiles/multMatrix.dir/clean
 CMakeFiles/mainServidorMultMatrix.dir/all:
 	$(MAKE) -f CMakeFiles/mainServidorMultMatrix.dir/build.make CMakeFiles/mainServidorMultMatrix.dir/depend
 	$(MAKE) -f CMakeFiles/mainServidorMultMatrix.dir/build.make CMakeFiles/mainServidorMultMatrix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles --progress-num=6,7,8,9,10 "Built target mainServidorMultMatrix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" --progress-num=6,7,8,9,10 "Built target mainServidorMultMatrix"
 .PHONY : CMakeFiles/mainServidorMultMatrix.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mainServidorMultMatrix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mainServidorMultMatrix.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" 0
 .PHONY : CMakeFiles/mainServidorMultMatrix.dir/rule
 
 # Convenience name for target.
@@ -105,14 +105,14 @@ CMakeFiles/mainServidorMultMatrix.dir/clean:
 CMakeFiles/mainClienteMultMatrix.dir/all:
 	$(MAKE) -f CMakeFiles/mainClienteMultMatrix.dir/build.make CMakeFiles/mainClienteMultMatrix.dir/depend
 	$(MAKE) -f CMakeFiles/mainClienteMultMatrix.dir/build.make CMakeFiles/mainClienteMultMatrix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles --progress-num=1,2,3,4,5 "Built target mainClienteMultMatrix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" --progress-num=1,2,3,4,5 "Built target mainClienteMultMatrix"
 .PHONY : CMakeFiles/mainClienteMultMatrix.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mainClienteMultMatrix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mainClienteMultMatrix.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" 0
 .PHONY : CMakeFiles/mainClienteMultMatrix.dir/rule
 
 # Convenience name for target.
@@ -132,14 +132,14 @@ CMakeFiles/mainClienteMultMatrix.dir/clean:
 CMakeFiles/multMatrix.dir/all:
 	$(MAKE) -f CMakeFiles/multMatrix.dir/build.make CMakeFiles/multMatrix.dir/depend
 	$(MAKE) -f CMakeFiles/multMatrix.dir/build.make CMakeFiles/multMatrix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles --progress-num=11,12,13 "Built target multMatrix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" --progress-num=11,12,13 "Built target multMatrix"
 .PHONY : CMakeFiles/multMatrix.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/multMatrix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/multMatrix.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/CMakeFiles" 0
 .PHONY : CMakeFiles/multMatrix.dir/rule
 
 # Convenience name for target.
