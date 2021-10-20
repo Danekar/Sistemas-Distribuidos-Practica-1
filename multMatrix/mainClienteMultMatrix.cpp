@@ -42,13 +42,13 @@ int main (int argc, char** argv){
     int opciones;
 	bool salir = false;
 	int row, col;
-	char fichero;
+	char* fichero;
 	matrix_t* m1RandClient= new matrix_t[1];
 	matrix_t* m1IdenClient= new matrix_t[1];
 	matrix_t* matrizCreadaClient= new matrix_t[1];
 
-	cout << "¿En que fichero quieres guardar las matrices?\n";
-	cin >> fichero;
+	/*cout << "¿En que fichero quieres guardar las matrices?\n";
+	cin >> fichero;*/
 
 	do{
 		
@@ -66,7 +66,6 @@ int main (int argc, char** argv){
 				cout << "Generando matriz Aleatoria de "<< row << "," << col<< endl;
 				if(row > 0 || col > 0){
 					m1RandClient = mulMatrix->createRandMatrix(row,col);
-					mulMatrix->writeMatrix(m1RandClient, &fichero);
 				}else{
 					cout<< "La matriz tiene que tener dimesiones positivas\n";
 				}			
@@ -110,13 +109,13 @@ int main (int argc, char** argv){
 				delete m1RandClient;
 				delete m1IdenClient;
 				delete matrizCreadaClient;
-				salir= true;
+				salir = true;
 			break;
 			default:
 				cout<<"Esa no es una opcion\n";
 			break;
 		}
-	}while(salir == false);
+	}while(!salir);
 
 	mulMatrix->~multMatrix_stub();
 	return 0;

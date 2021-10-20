@@ -121,18 +121,14 @@ void multMatrix_stub::writeMatrix(matrix_t* m, const char *fileName){
 }
 multMatrix_stub::~multMatrix_stub(){
 	char msg = EXIT_MATRIX;
-	std::cout<<"8.1\n";
 	sendMSG(serverID,(void*)&msg,sizeof(char));
 	//recibir resultado
 	char* buff=nullptr;
 	int dataLen=0;
 	char state=0;
 	
-	std::cout<<"8.2\n";
 	recvMSG(serverID,(void**)&buff,&dataLen);
-	std::cout<<"8.3\n";
 	memcpy(&state,buff,sizeof(char));
-	std::cout<<"8.4\n";
 	delete buff;
 	
 	if(state!=OP_OK){
