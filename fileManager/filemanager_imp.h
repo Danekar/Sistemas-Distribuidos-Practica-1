@@ -1,3 +1,5 @@
+//Daniel Khomyakov y Eduardo Sebastian de Erice
+
 #ifndef FILEMANAGER_IMP_H
 #define FILEMANAGER_IMP_H
 

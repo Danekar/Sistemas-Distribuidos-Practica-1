@@ -1,3 +1,5 @@
+//Daniel Khomyakov y Eduardo Sebastian de Erice
+
 #include "multmatrix_imp.h"
 
 multMatrix_imp::multMatrix_imp(int clientID){

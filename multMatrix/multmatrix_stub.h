@@ -1,3 +1,5 @@
+//Daniel Khomyakov y Eduardo Sebastian de Erice
+
 #ifndef MULTMATRIX_IMP_H
 #define MULTMATRIX_IMP_H
 

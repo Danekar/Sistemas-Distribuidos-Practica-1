@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/mainClienteMultMatrix.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+multmatrix_stub.h
+/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_stub.h
+
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix.h
 
 /home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/multMatrix/multmatrix_stub.cpp

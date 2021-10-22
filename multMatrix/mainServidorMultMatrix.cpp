@@ -1,3 +1,5 @@
+//Daniel Khomyakov y Eduardo Sebastian de Erice
+
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>

@@ -1,3 +1,5 @@
+//Daniel Khomyakov y Eduardo Sebastian de Erice
+
 #include "multmatrix_stub.h"
 
 multMatrix_stub::multMatrix_stub(){

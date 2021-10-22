@@ -1,3 +1,5 @@
+//Daniel Khomyakov y Eduardo Sebastian de Erice
+
 #include "filemanager_imp.h"
 
 FileManager_imp::FileManager_imp(int clientID, string path){
@@ -34,121 +36,66 @@ void FileManager_imp::exec(){
             
             	case LIST_FILES:
             	{
-            	
-            	
             	   vector<string*>* flist=new vector<string*>();
             	
-            	
-            	   flist = filemanagerImp->listFiles();
-  
-  
+            	   flist = filemanagerImp->listFiles();  
+            	   
             	   int tamano = flist->size();
+            	 
             	   sendMSG(clientID,(void*)&tamano, sizeof(int));
             	
             	  for(unsigned int i=0;i<flist->size();++i){
             	 
        	  sendMSG(clientID,(void*)flist->at(i)->c_str(), strlen(flist->at(i)->c_str()));
    		 }
+   		 filemanagerImp->freeListedFiles(flist);
    		 
     	       
             	}break;
                 case READ_FILES:
                 {
-                    char* buff=nullptr;
                     char* filename=nullptr;
                     char* data=nullptr;
-                    unsigned long int dataLen2 =0;
+                    unsigned long int dataLen2=0;
                
-                    recvMSG(clientID,(void**)&buff,&dataLen);
-                 
-               	
-                    //memcpy(&filename, buff, dataLen);
-                    //delete buff;
-                 
+                    recvMSG(clientID,(void**)&filename,&dataLen);
        
-                    filemanagerImp->readFile(buff,data,dataLen2);
-                   
-                    sendMSG(clientID,(void*)&data, sizeof(char)*sizeof(dataLen2));
-
+                    filemanagerImp->readFile(filename,data,dataLen2);
                     sendMSG(clientID,(void*)&dataLen2,sizeof(unsigned long int));
-	cout<<data<<"\n";
-            		
-                    delete filename;
-                    delete data;
-           
+                    sendMSG(clientID,(void*)data, sizeof(char*)*sizeof(dataLen2));
+                    
+                   
+                     
+			
+		    delete data;
+		    delete filename; 
                 
                 }break;             
                 case WRITE_FILES:
                 {
-                    char* buff=nullptr;
                     char* filename=nullptr;
                     char* data=nullptr;
-                    unsigned long int dataLen2=0;
-                    
-                   
-                    recvMSG(clientID,(void**)&filename,&dataLen);
-                
+                    unsigned long int *dataLength=nullptr;
+                     
+                    recvMSG(clientID,(void**)&filename,&dataLen);                  
                     recvMSG(clientID,(void**)&data,&dataLen);
+                    recvMSG(clientID,(void**)&dataLength,&dataLen);
+
+                  
+                filemanagerImp->writeFile(filename,data,dataLength[0]);
                  
-                    recvMSG(clientID,(void**)&dataLen2,&dataLen);
-                    cout<<dataLen2<<"\n";
-              	
-                filemanagerImp->writeFile(filename,data,strlen(data));
-                
-                
+                delete filename;
+                delete data;
                
                 }break;
                 
-                case FREE_LISTED_FILES:
-                {
-                	
-                char* buff=nullptr;
-              
-                int tamanoDeVector=0;
-                    vector<string*>* flist=new vector<string*>();
-                    
-                   
-                    
-                    	recvMSG(clientID,(void**)&buff,&dataLen);
-			memcpy(&tamanoDeVector,buff,dataLen);
-			delete buff;
-			cout<<"Tamaño del vector: "<<tamanoDeVector<<"\n";
-                    
-                    for(unsigned int i=0;i<tamanoDeVector;++i){
-			//recibimos el nombre del fichero
-			cout<<"4.1\n";
-   			recvMSG(clientID,(void**)&buff,&dataLen);
-   			//creamos un nuevo STRING PUNTERO(no se si esto es etico o no)
-   			cout<<"4.2\n";
-   			string *filename = new string;
-   			//le metemos lo que tenia el buffer que es un CHAR PUNTERO y el filename un STRING PUNTERO y los unimos con append
-   			cout<<"4.3\n";
-			filename->append(buff);
-			//por ultimo metemos el vector de STRING PUNTERO en el VECTOR DE STRING DE PUNTERO.
-			cout<<"4.4\n";
-   			flist->push_back(filename);   	   	
-			cout<<"4.5\n";
-			//limpimos el buffer
-			delete buff;
-   			}
-                    cout<<"4.6\n";
-     
-     
- 
-                    filemanagerImp->freeListedFiles(flist);
-                    cout<<"4.7\n";
-                    
-                
-                }break;      	  
+               	  
                 case OP_EXIT:
                 {
-                cout<<"5.1\n";
                     salir=true;
-                    cout<<"5.2\n";
                     char opOK=OP_OK;
-                    cout<<"5.3\n";
                     sendMSG(clientID,(void*)&opOK,sizeof(char));
-                    cout<<"5.4\n";
+                  
                 }break;
                 default:
                     std::cout<<"Error, tipo operacion no valido\n";
