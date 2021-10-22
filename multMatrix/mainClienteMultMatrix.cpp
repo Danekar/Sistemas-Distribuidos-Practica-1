@@ -42,13 +42,13 @@ int main (int argc, char** argv){
     int opciones;
 	bool salir = false;
 	int row, col;
-	char* fichero;
+	char fichero[20];
 	matrix_t* m1RandClient= new matrix_t[1];
 	matrix_t* m1IdenClient= new matrix_t[1];
 	matrix_t* matrizCreadaClient= new matrix_t[1];
 
-	/*cout << "¿En que fichero quieres guardar las matrices?\n";
-	cin >> fichero;*/
+	cout << "¿En que fichero quieres guardar las matrices?\n";
+	cin >> fichero;
 
 	do{
 		
@@ -66,6 +66,7 @@ int main (int argc, char** argv){
 				cout << "Generando matriz Aleatoria de "<< row << "," << col<< endl;
 				if(row > 0 || col > 0){
 					m1RandClient = mulMatrix->createRandMatrix(row,col);
+					mulMatrix->writeMatrix(m1RandClient, fichero);
 				}else{
 					cout<< "La matriz tiene que tener dimesiones positivas\n";
 				}			
@@ -78,7 +79,8 @@ int main (int argc, char** argv){
 				cout << "Generando matriz Identidad de "<< row << "," << col<< endl;
 				if(row > 0 || col > 0){
 					if(comprobarIdentidad(row, col)){
-						m1IdenClient = mulMatrix->createRandMatrix(row,col);
+						m1IdenClient = mulMatrix->createIdentity(row,col);
+						mulMatrix->writeMatrix(m1IdenClient, fichero);
 					}else{
 						cout << "Una matriz identidad tiene el mismo numero de columnas y filas, prueba otravez.\n";
 					}	
@@ -99,6 +101,7 @@ int main (int argc, char** argv){
 					for(int i = 0; i < row*col; i++){
 						cin>>matrizCreadaClient->data[i];
 					}
+					mulMatrix->writeMatrix(matrizCreadaClient, fichero);
 				}else{
 					cout<< "La matriz tiene que tener dimesiones positivas\n";
 				}

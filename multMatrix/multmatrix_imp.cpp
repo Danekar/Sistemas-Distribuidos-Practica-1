@@ -41,24 +41,17 @@ while(!salir)
 					
 					//Creacion de matriz para guardar la leida
 					matrix_t* matrizLeer = new matrix_t;
+					
 					//recibir nombre fichero
-					
 					recvMSG(clientID,(void**)&buff,&dataLen);
-					
-					
-					//memcpy(&nombreFich,buff,strlen(buff)+1);	
-					
-					
+				
 					matrizLeer = matrixImp->readMatrix(buff);
 					delete buff;
+
 					//enviar matriz
-					
 					sendMSG(clientID,(void*)&matrizLeer->rows,sizeof(int));
-					
 					sendMSG(clientID,(void*)&matrizLeer->cols,sizeof(int));
-					
 					sendMSG(clientID,(void*)matrizLeer->data,sizeof(int)*matrizLeer->rows*matrizLeer->cols);
-					
 					delete matrizLeer;	
 					
 				}break;
@@ -72,57 +65,45 @@ while(!salir)
 					matrix_t* m2 = new matrix_t;
 
 					//recibe rows m1
-    				
 					recvMSG(clientID,(void**)&m1buff, &dataLen);
 					memcpy(&m1->rows,m1buff,sizeof(int));
 					delete m1buff;
 					
 					//recibe cols m1
-    				
 					recvMSG(clientID,(void**)&m1buff, &dataLen);
 					memcpy(&m1->cols,m1buff,sizeof(int));
 					delete m1buff;
 					
 					//recibe data m1
-   				 	
 					recvMSG(clientID,(void**)&m1buff, &dataLen);
-					//memcpy(&m1->data,buff,sizeof(int)*m1->rows*m1->cols);
 					m1->data = (int*)m1buff;
-					delete m1buff;
-
+					
 					//recibe rows m2
-    				
 					recvMSG(clientID,(void**)&m2buff, &dataLen);
 					memcpy(&m2->rows,m2buff,sizeof(int));
 					delete m2buff;
 					
 					//recibe cols m2
-    				
 					recvMSG(clientID,(void**)&m2buff, &dataLen);
 					memcpy(&m2->cols,m2buff,sizeof(int));
 					delete m2buff;
 					
 					//recibe data m2
-    				
 					recvMSG(clientID,(void**)&m2buff, &dataLen);
-					//memcpy(&m2->data,buff,sizeof(int)*m2->rows*m2->cols);
 					m2->data = (int*)m2buff;
 
 					//guarda la matriz resultado en una nueva matriz
-    				
-					matrizResultado = matrixImp->multMatrices(m1, m2);					
+					matrizResultado = matrixImp->multMatrices(m1, m2);
+					delete m1buff;
+					delete m2buff;
 					delete m1;
 					delete m2;
 
 				
 					//envia al cliente la matriz por partes
-    				
 					sendMSG(clientID,(void*)&matrizResultado->rows,sizeof(int));
-									
 					sendMSG(clientID,(void*)&matrizResultado->cols,sizeof(int));
-					
 					sendMSG(clientID,(void*)&matrizResultado->data,sizeof(int)*matrizResultado->rows*matrizResultado->cols);
-					
 					delete matrizResultado;
 					
 				}break;
@@ -132,6 +113,7 @@ while(!salir)
 					matrix_t* matrizEscribir = new matrix_t;
 					char* fileName = nullptr;
 					char* buff = nullptr;
+
 					//recibir nombre del fichero
 					recvMSG(clientID,(void**)&fileName, &dataLen);//
 
@@ -145,11 +127,11 @@ while(!salir)
 					delete buff;
 					//recibe data matrizEscribir
 					recvMSG(clientID,(void**)&buff, &dataLen);
-					//memcpy(&matrizEscribir->data,buff,sizeof(int));
 					matrizEscribir->data = (int*)buff;
-					delete buff;
+					
 
 					matrixImp->writeMatrix(matrizEscribir, fileName);
+					delete buff;
 					delete matrizEscribir;
 					delete fileName;
 				}break;
@@ -171,8 +153,8 @@ while(!salir)
 
 					
 					matrizIdentidad = matrixImp->createIdentity(rows,cols);
+
 					//devolver al cliente la matriz
-					
 					sendMSG(clientID,(void*)&matrizIdentidad->rows,sizeof(int));
 					sendMSG(clientID,(void*)&matrizIdentidad->cols,sizeof(int));
 					sendMSG(clientID,(void*)matrizIdentidad->data,sizeof(int)*matrizIdentidad->rows*matrizIdentidad->cols);
@@ -207,7 +189,7 @@ while(!salir)
 				{
 					salir=true;
 					char opOK=OP_OK;
-					std::cout<<"Salida\n";
+					std::cout<<"Cliente "<< clientID<<" se ha desconectado\n";
 					sendMSG(clientID,(void*)&opOK,sizeof(char));
 				}break;
 				

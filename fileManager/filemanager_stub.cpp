@@ -20,7 +20,7 @@ FileManager_stub::FileManager_stub(){
 
 vector<string*>* FileManager_stub::listFiles(){
 	char msg = LIST_FILES;
-	char* buff = nullptr;
+	char* buff = nullptr;filemanager_stub.cpp:87:
 	int dataLen = 0;
 	int tamanoDeVector=0;
 	

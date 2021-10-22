@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/filemanager.cpp.o"
-  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/filemanager_stub.cpp.o"
-  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/mainCliente.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/mainCliente.cpp.o"
-  "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp" "/home/danekar/Documents/GitHub/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/utils.cpp.o"
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/filemanager.cpp.o"
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager_stub.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/filemanager_stub.cpp.o"
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/mainCliente.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/mainCliente.cpp.o"
+  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/utils.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/mainCliente.dir/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
