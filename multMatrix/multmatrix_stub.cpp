@@ -59,38 +59,28 @@ matrix_t *multMatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 	//Enviamos las columnas, filas y datos de la matriz m1 respectivamente.
 	sendMSG(serverID,(void*)&m1->rows,sizeof(int));
 	sendMSG(serverID,(void*)&m1->cols,sizeof(int));
-	sendMSG(serverID,(void*)&m1->data,sizeof(int)*m1->rows*m1->cols);
+	sendMSG(serverID,(void*)m1->data,sizeof(int)*m1->rows*m1->cols);
 	
 	
 	//Enviamos las columnas, filas y datos de la matriz m2 respectivamente.
 	sendMSG(serverID,(void*)&m2->rows,sizeof(int));
 	sendMSG(serverID,(void*)&m2->cols,sizeof(int));
-	sendMSG(serverID,(void*)&m2->data,sizeof(int)*m2->rows*m2->cols);
+	sendMSG(serverID,(void*)m2->data,sizeof(int)*m2->rows*m2->cols);
 	
 	//recibe rows
-	
 	recvMSG(serverID,(void**)&buff, &dataLen);
-	
 	memcpy(&matrizResultado->rows,buff,sizeof(int));
-	
-	
 	delete buff;
-	
 
-	
-	
 	//recibe cols
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	memcpy(&matrizResultado->cols,buff,sizeof(int));
 	delete buff;
 	
-	
 	//recibe data
 	recvMSG(serverID,(void**)&buff, &dataLen);
 	//memcpy(&matrizResultado->data,buff,sizeof(int));
 	matrizResultado->data = (int*)buff;
-	delete buff;
-	
 	
 	return matrizResultado;
 }

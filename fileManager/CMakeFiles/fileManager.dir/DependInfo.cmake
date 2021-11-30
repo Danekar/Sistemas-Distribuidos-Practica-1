@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/fileManager.dir/filemanager.cpp.o"
-  "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/main_fm.cpp" "/home/eduardo/Desktop/Programacion Sistemas Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/fileManager.dir/main_fm.cpp.o"
+  "/home/eduardo/Desktop/Programacion-Sistemas-Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/filemanager.cpp" "/home/eduardo/Desktop/Programacion-Sistemas-Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/fileManager.dir/filemanager.cpp.o"
+  "/home/eduardo/Desktop/Programacion-Sistemas-Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/main_fm.cpp" "/home/eduardo/Desktop/Programacion-Sistemas-Distribuidos/Practica1/Practica1/Sistemas-Distribuidos-Practica-1/fileManager/CMakeFiles/fileManager.dir/main_fm.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

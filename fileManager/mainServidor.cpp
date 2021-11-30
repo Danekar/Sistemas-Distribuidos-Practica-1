@@ -16,7 +16,7 @@ void threadClient(int clientID){
 
 int main (int argc, char** argv){
 	int idSocket = 0;
-	idSocket = initServer(3301);
+	idSocket = initServer(3302);
 
 	while(true)
 	{

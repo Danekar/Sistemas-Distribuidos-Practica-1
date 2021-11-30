@@ -17,7 +17,7 @@
 #define OP_OK           'O'
 
 #define IP_SERVER "127.0.0.1"
-#define PORT_SERVER 3301
+#define PORT_SERVER 31001
 
 class multMatrix_stub{
 private:

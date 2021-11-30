@@ -16,7 +16,7 @@ using namespace std;
 #define OP_OK               'O'
 
 #define IP_SERVER "127.0.0.1"
-#define PORT_SERVER 3301
+#define PORT_SERVER 31002
 
 class FileManager_stub{
 private:
